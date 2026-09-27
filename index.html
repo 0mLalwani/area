@@ -1,232 +1,750 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./style.css">
-  <title>Document</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
- <nav>
-  <h3>Area</h6>
-  <ul>
-    <li>Benefits</li>
-    <li>Specifications</li>
-    <li>How-to</li>
-    <li>Contact Us</li>
-  </ul>
-  <button>Learn More&#8599;</button>
-  </nav>
-  <main>
-    <section class="hero">
-      <h1>Browse everything.</h1>
-      <img src="./media/hero.jpg" alt=""> <!--remember to set this position absolute-->
-      <div></div>
-    </section>
-    <section class="testimonials">
-      <div>Trusted by:</div>
-      <div>
-        <img src="./media/trusted-by-1.png" alt="">
-        <img src="./media/trusted-by-2.png" alt="">
-        <img src="./media/trusted-by-3.png" alt="">
-        <img src="./media/trusted-by-4.png" alt="">
-        <img src="./media/trusted-by-5.png" alt="">
-        <img src="./media/trusted-by-6.png" alt="">
-      </div>
-    </section>
-    <section class="features">
-      <div>Benefits</div>
-      <h2>We've cracked the code.</h2>
-      <div>Area provides real insights without the data overload.</div>
-      <div>
-        <div>
-          <img src="./media/features-1.svg" alt="">
-          <div>Amplify Insights</div>
-          <div>Unlock data-driven decisions with comprehensive analytics, revealing key opportunities for strategic regional growth.</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Area</title>
+    <link rel="shortcut icon" href="./media/Logo.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  </head>
+  <body class="relative mx-auto max-w-300">
+    <!-- fixed navbar -->
+    <nav
+      class="fixed inset-x-0 z-10 mx-auto flex w-screen max-w-300 items-center justify-between rounded-b-[20px] bg-white px-5 pt-5 pb-2 shadow-xl md:rounded-none lg:pb-0 lg:shadow-none"
+    >
+      <!-- main logo -->
+      <a href="#" class="hover:cursor-pointer">
+        <h3
+          class="font-dm-san text-3xl leading-[120%] font-medium tracking-[-8%]"
+        >
+          Area
+        </h3>
+      </a>
+
+      <!-- md and above nav links -->
+      <ul class="hidden gap-7 px-6 py-5 md:flex">
+        <a
+          href="#benefits"
+          class="font-dm-san text-sm leading-[140%] font-bold tracking-[-2.5%] hover:underline"
+          >Benefits</a
+        >
+        <a
+          href="#specifications"
+          class="font-dm-san text-sm leading-[140%] font-bold tracking-[-2.5%] hover:underline"
+          >Specifications</a
+        >
+        <a
+          href="#how-to"
+          class="font-dm-san text-sm leading-[140%] font-bold tracking-[-2.5%] hover:underline"
+          >How-to</a
+        >
+        <a
+          href="#connect"
+          class="font-dm-san text-sm leading-[140%] font-bold tracking-[-2.5%] hover:underline"
+          >Contact Us</a
+        >
+      </ul>
+
+      <!-- learn more button -->
+      <button
+        class="hover:bg-green-medium bg-green-dark hidden rounded-4xl px-5.5 py-3.5 md:block"
+      >
+        <span
+          class="text-ui leading-[140%] font-semibold tracking-[-2.5%] text-white"
+        >
+          Learn More <span class="font-normal">&#8599;</span>
+        </span>
+      </button>
+
+      <!-- mobile menu (replaces all of the above) -->
+      <div class="fixed inset-0 z-20 hidden bg-white" id="mobile-menu">
+        <div class="flex justify-between p-5 pt-5">
+          <a href="#" class="hover:cursor-pointer">
+            <h3
+              class="font-dm-san text-3xl leading-[120%] font-medium tracking-[-8%]"
+            >
+              Area
+            </h3>
+          </a>
+          <img
+            id="close-btn"
+            src="./media/cross-vector.svg"
+            alt=""
+            srcset=""
+            class="w-4.5 cursor-pointer rounded-sm hover:bg-olive-300"
+          />
         </div>
-        <div>
-          <img src="./media/features-2.svg" alt="">
-          <div>Control Your Global Presence</div>
-          <div>Manage and track satellite offices, ensuring consistent performance and streamlined operations everywhere.</div>
+        <div class="px-5 pt-2 pb-8">
+          <ul class="flex w-full flex-col items-start py-5">
+            <a
+              href="#benefits"
+              class="font-dm-san border-t-grey-light w-full border-t py-12 text-sm leading-[140%] font-bold tracking-[-2.5%]"
+              >Benefits</a
+            >
+            <a
+              href="#specifications"
+              class="font-dm-san border-t-grey-light w-full border-t py-12 text-sm leading-[140%] font-bold tracking-[-2.5%]"
+              >Specifications</a
+            >
+            <a
+              href="#how-to"
+              class="font-dm-san border-t-grey-light w-full border-t py-12 text-sm leading-[140%] font-bold tracking-[-2.5%]"
+              >How-to</a
+            >
+            <a
+              href="#connect"
+              class="font-dm-san border-t-grey-light w-full border-t py-12 text-sm leading-[140%] font-bold tracking-[-2.5%]"
+              >Contact Us</a
+            >
+          </ul>
+          <button
+            class="hover:bg-green-medium bg-green-dark rounded-4xl px-5.5 py-3.5"
+          >
+            <span
+              class="text-ui leading-[140%] font-semibold tracking-[-2.5%] text-white"
+            >
+              Learn More <span class="font-normal">&#8599;</span>
+            </span>
+          </button>
         </div>
-        <div>
-          <img src="./media/features-3.svg" alt="">
-          <div>Remove Language Barriers</div>
-          <div>Adapt to diverse markets with built-in localization for clear communication and enhanced user experience.</div>
+      </div>
+
+      <!-- hamburger trigger -->
+      <button
+        class="cursor-pointer rounded-sm p-4 hover:bg-olive-300 md:hidden"
+        id="hamburger-menu"
+      >
+        <img src="./media/hamburger.svg" alt="menu" />
+      </button>
+    </nav>
+
+    <!-- main section -->
+    <main class="lg:pt-8">
+      <!-- px-4 and h-90.5 are really doing some magic here -->
+      <!-- hero -->
+      <section
+        class="flex flex-col gap-30 px-4 pt-30 md:gap-35 lg:gap-60 lg:px-10"
+      >
+        <h1
+          class="font-crimson md:text-h1 text-center text-6xl leading-[85%] tracking-[-4.5%] lg:text-[160px]"
+        >
+          Browse everything.
+        </h1>
+        <!-- gotta use the picture element for different screensizes -->
+        <div class="bg-green-medium relative h-90.5 rounded-4xl">
+          <picture class="">
+            <source media="(min-width: 768px)" srcset="./media/Ipad.png" />
+            <img
+              class="absolute inset-x-0 bottom-0 mx-auto lg:w-225"
+              src="./media/iPhone.png"
+              alt="landing-img-phone"
+            />
+          </picture>
         </div>
-        <div>
-          <img src="./media/features-4.svg" alt="">
-          <div>Visualize Growth</div>
-          <div>Generate precise, visually compelling reports that illustrate your growth trajectories across all regions.</div>
+      </section>
+      <!-- trust banners -->
+      <section class="flex flex-col gap-7.5 px-4 py-12.5 md:px-10">
+        <div
+          class="font-dm-san text-para text-grey-dark leading-[140%] tracking-[-0.5%]"
+        >
+          Trusted by:
         </div>
+        <div
+          class="grid grid-cols-2 items-center gap-10 md:grid-cols-4 lg:flex"
+        >
+          <img class="w-37.5 p-5" src="./media/trusted-by-1.png" alt="" />
+          <img class="w-37.5 p-5" src="./media/trusted-by-2.png" alt="" />
+          <img class="w-37.5 p-5" src="./media/trusted-by-3.png" alt="" />
+          <img class="w-37.5 p-5" src="./media/trusted-by-4.png" alt="" />
+          <img
+            class="w-37.5 p-5 md:col-start-2"
+            src="./media/trusted-by-5.png"
+            alt=""
+          />
+          <img class="w-37.5 p-5" src="./media/trusted-by-6.png" alt="" />
+        </div>
+      </section>
+      <!-- benefits -->
+      <section class="px-4 md:px-10" id="benefits">
+        <div
+          class="border-t-0.5 border-t-grey-light flex flex-col gap-12 border-t pt-20 pb-15"
+        >
+          <div class="flex flex-col gap-7.5 pr-5">
+            <div
+              class="font-rob-mono text-green-dark text-[11px] leading-[140%] tracking-[-3%] lg:text-xs"
+            >
+              Benefits
+            </div>
+            <h2
+              class="font-crimson md:text-h2 text-[50px] leading-[-95%] tracking-[-3%] lg:text-6xl"
+            >
+              We've cracked the code.
+            </h2>
+            <div
+              class="text-grey-dark font-dm-san text-para leading-[140%] tracking-[-0.5%]"
+            >
+              Area provides real insights without the data overload.
+            </div>
+          </div>
+          <ul class="grid grid-cols-1 gap-5 pt-10 md:grid-cols-2 lg:flex">
+            <li
+              class="border-t-grey-light flex flex-col gap-6 border-t py-10 pr-5"
+            >
+              <img src="./media/features-1.svg" alt="" class="w-6" />
+              <div class="font-crimson text-h4 tracking-[-3%]">
+                Amplify Insights
+              </div>
+              <div
+                class="font-dm-san text-para text-grey-dark leading-[140%] tracking-[-0.5%]"
+              >
+                Unlock data-driven decisions with comprehensive analytics,
+                revealing key opportunities for strategic regional growth.
+              </div>
+            </li>
+            <li
+              class="border-t-grey-light flex flex-col gap-6 border-t py-10 pr-5"
+            >
+              <img src="./media/features-2.svg" alt="" class="w-6" />
+              <div class="font-crimson text-h4 tracking-[-3%]">
+                Control Your Global Presence
+              </div>
+              <div
+                class="font-dm-san text-para text-grey-dark leading-[140%] tracking-[-0.5%]"
+              >
+                Manage and track satellite offices, ensuring consistent
+                performance and streamlined operations everywhere.
+              </div>
+            </li>
+            <li
+              class="border-t-grey-light flex flex-col gap-6 border-t py-10 pr-5"
+            >
+              <img src="./media/features-3.svg" alt="" class="w-6" />
+              <div class="font-crimson text-h4 tracking-[-3%]">
+                Remove Language Barriers
+              </div>
+              <div
+                class="font-dm-san text-para text-grey-dark leading-[140%] tracking-[-0.5%]"
+              >
+                Adapt to diverse markets with built-in localization for clear
+                communication and enhanced user experience.
+              </div>
+            </li>
+            <li
+              class="border-t-grey-light flex flex-col gap-6 border-t py-10 pr-5"
+            >
+              <img src="./media/features-4.svg" alt="" class="w-6" />
+              <div class="font-crimson text-h4 tracking-[-3%]">
+                Visualize Growth
+              </div>
+              <div
+                class="font-dm-san text-para text-grey-dark leading-[140%] tracking-[-0.5%]"
+              >
+                Generate precise, visually compelling reports that illustrate
+                your growth trajectories across all regions.
+              </div>
+            </li>
+          </ul>
+        </div>
+        <img
+          src="./media/cover-1.jpg"
+          alt=""
+          class="h-150 rounded-4xl object-cover"
+        />
+      </section>
+      <!-- see the big picture -->
+      <section
+        class="px-4 pt-12 pb-20 md:px-10 lg:flex lg:items-center lg:gap-5"
+      >
+        <div class="flex flex-col gap-10 pt-15 lg:w-147">
+          <div
+            class="border-t-grey-light flex flex-col items-start gap-10 border-t pt-15 pb-20"
+          >
+            <h2
+              class="font-crimson text-h3 md:text-h2 leading-[95%] tracking-[-3%] lg:text-6xl"
+            >
+              See the Big Picture
+            </h2>
+            <div
+              class="text-para font-dm-san text-grey-dark leading-[140%] tracking-[-0.5%]"
+            >
+              Area turns your data into clear, vibrant visuals that show you
+              exactly what's happening in each region.
+            </div>
+            <ol>
+              <li class="border-t-grey-light flex gap-7 border-t py-5">
+                <h3
+                  class="font-dm-san text-para text-grey-dark leading-[140%] font-bold tracking-[-0.5%]"
+                >
+                  01
+                </h3>
+                <p
+                  class="font-dm-san text-para leading-[140%] tracking-[-0.5%]"
+                >
+                  Spot Trends in Seconds: No more digging through numbers.
+                </p>
+              </li>
+              <li class="border-t-grey-light flex gap-7 border-t py-5">
+                <h3
+                  class="font-dm-san text-para text-grey-dark leading-[140%] font-bold tracking-[-0.5%]"
+                >
+                  02
+                </h3>
+                <p
+                  class="font-dm-san text-para leading-[140%] tracking-[-0.5%]"
+                >
+                  Get Everyone on the Same Page: Share easy-to-understand
+                  reports with your team.
+                </p>
+              </li>
+              <li class="border-t-grey-light flex gap-7 border-t py-5">
+                <h3
+                  class="font-dm-san text-para text-grey-dark leading-[140%] font-bold tracking-[-0.5%]"
+                >
+                  03
+                </h3>
+                <p
+                  class="font-dm-san text-para leading-[140%] tracking-[-0.5%]"
+                >
+                  Make Presentations Pop: Interactive maps and dashboards keep
+                  your audience engaged.
+                </p>
+              </li>
+              <li class="border-t-grey-light flex gap-7 border-t py-5">
+                <h3
+                  class="font-dm-san text-para text-grey-dark leading-[140%] font-bold tracking-[-0.5%]"
+                >
+                  04
+                </h3>
+                <p
+                  class="font-dm-san text-para leading-[140%] tracking-[-0.5%]"
+                >
+                  Your Global Snapshot: Get a quick, clear overview of your
+                  entire operation.
+                </p>
+              </li>
+            </ol>
+            <button
+              class="bg-green-light hover:bg-green-medium text-ui rounded-4xl px-5.5 py-3.5 leading-[140%] font-bold tracking-[-2.5%] text-black"
+            >
+              Discover More
+            </button>
+          </div>
+        </div>
+        <img
+          src="./media/cover-2.png"
+          alt=""
+          class="mx-auto w-screen lg:h-161 lg:w-147"
+        />
+      </section>
+      <!-- specifications -->
+      <section
+        id="specifications"
+        class="flex flex-col items-center gap-2 pb-30 md:px-10"
+      >
+        <div
+          class="border-t-grey-medium flex flex-col items-center gap-8 border-t px-4 py-20 text-center md:max-w-140"
+        >
+          <div
+            class="text-xxs font-rob-mono text-green-dark leading-[140%] tracking-[-3%] lg:text-xs"
+          >
+            Specs
+          </div>
+          <div
+            class="font-crimson text-h3 md:text-h2 leading-[95%] tracking-[-3%] lg:text-6xl"
+          >
+            Why Choose Area?
+          </div>
+          <div
+            class="text-grey-dark text-para font-dm-sans leading-[140%] tracking-[-0.5%]"
+          >
+            You need a solution that keeps up. That’s why we developed Area. A
+            developer-friendly approach to streamline your business.
+          </div>
+          <button
+            class="bg-green-light hover:bg-green-medium text-ui rounded-4xl px-5.5 py-3.5 leading-[140%] font-bold tracking-[-2.5%] text-black"
+          >
+            Discover More
+          </button>
+        </div>
+        <div class="flex w-full rounded-2xl p-0.5">
+          <div
+            class="border-grey-light min-w-0 flex-1 rounded-2xl border shadow-sm md:shadow-xl"
+          >
+            <h3
+              class="font-dm-san border-b-grey-medium min-w-0 gap-4 border-b px-7.5 py-10 text-center text-xl leading-[120%] font-medium tracking-[-8%]"
+            >
+              Area
+            </h3>
+            <div
+              class="border-b-grey-light flex min-w-0 gap-2 border-b px-5 py-8"
+            >
+              <img class="w-2.5" src="./media/green-check.svg" alt="yes" />
+              <p
+                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+              >
+                Ultra-fast browsing
+              </p>
+            </div>
+            <div class="border-b-grey-light flex gap-2 border-b px-5 py-8">
+              <img class="w-2.5" src="./media/green-check.svg" alt="yes" />
+              <p
+                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+              >
+                Advanced AI insights
+              </p>
+            </div>
+            <div class="border-b-grey-light flex gap-2 border-b px-5 py-8">
+              <img class="w-2.5" src="./media/green-check.svg" alt="yes" />
+              <p
+                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+              >
+                Seamless integration
+              </p>
+            </div>
+            <div class="border-b-grey-light flex gap-2 border-b px-5 py-8">
+              <img class="w-2.5" src="./media/green-check.svg" alt="yes" />
+              <p
+                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+              >
+                Advanced AI insights
+              </p>
+            </div>
+            <div class="border-b-grey-light flex gap-2 border-b px-5 py-8">
+              <img class="w-2.5" src="./media/green-check.svg" alt="yes" />
+              <p
+                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+              >
+                Ultra-fast browsing
+              </p>
+            </div>
+            <div class="border-b-grey-light flex gap-2 px-5 py-8">
+              <img class="w-2.5" src="./media/green-check.svg" alt="yes" />
+              <p
+                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+              >
+                Full UTF-8 support
+              </p>
+            </div>
+          </div>
+          <div class="min-w-0 flex-1 rounded-2xl border-y border-y-transparent">
+            <h3
+              class="font-dm-san border-b-grey-medium text-grey-dark min-w-0 gap-4 border-b px-7.5 py-10 text-center text-xl leading-[120%] font-medium tracking-[-8%]"
+            >
+              WebSurge
+            </h3>
+            <div
+              class="border-r-grey-light border-b-grey-light flex min-w-0 gap-2 border-r border-b px-5 py-8"
+            >
+              <img class="w-2.5" src="./media/check-vector.svg" alt="yes" />
+              <p
+                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+              >
+                Fast browsing
+              </p>
+            </div>
+            <div
+              class="border-r-grey-light border-b-grey-light flex gap-2 border-r border-b px-5 py-8"
+            >
+              <img class="w-2.5" src="./media/check-vector.svg" alt="yes" />
+              <p
+                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+              >
+                Basic AI recommendations
+              </p>
+            </div>
+            <div
+              class="border-r-grey-light border-b-grey-light flex gap-2 border-r border-b px-5 py-8"
+            >
+              <img class="w-2.5" src="./media/check-vector.svg" alt="yes" />
+              <p
+                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+              >
+                Restricts customization
+              </p>
+            </div>
+            <div
+              class="border-r-grey-light border-b-grey-light flex gap-2 border-r border-b px-5 py-8"
+            >
+              <img class="w-2.5" src="./media/cross-vector.svg" alt="yes" />
+              <p
+                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+              >
+                Basic AI insights
+              </p>
+            </div>
+            <div
+              class="border-r-grey-light border-b-grey-light flex gap-2 border-r border-b px-5 py-8"
+            >
+              <img class="w-2.5" src="./media/check-vector.svg" alt="yes" />
+              <p
+                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+              >
+                Fast browsing
+              </p>
+            </div>
+            <div
+              class="border-r-grey-light border-b-grey-light flex gap-2 border-r border-b px-5 py-8"
+            >
+              <img class="w-2.5" src="./media/cross-vector.svg" alt="yes" />
+              <p
+                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+              >
+                Potential display errors
+              </p>
+            </div>
+          </div>
+          <div class="min-w-0 flex-1 rounded-2xl border-y border-y-transparent">
+            <h3
+              class="font-dm-san border-b-grey-medium text-grey-dark min-w-0 gap-4 border-b px-7.5 py-10 text-center text-xl leading-[120%] font-medium tracking-[-8%]"
+            >
+              HyperView
+            </h3>
+            <div
+              class="border-b-grey-light flex min-w-0 gap-2 border-b px-5 py-8"
+            >
+              <img class="w-2.5" src="./media/cross-vector.svg" alt="yes" />
+              <p
+                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+              >
+                Moderate speeds
+              </p>
+            </div>
+            <div class="border-b-grey-light flex gap-2 border-b px-5 py-8">
+              <img class="w-2.5" src="./media/cross-vector.svg" alt="yes" />
+              <p
+                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+              >
+                No AI assistance
+              </p>
+            </div>
+            <div class="border-b-grey-light flex gap-2 border-b px-5 py-8">
+              <img class="w-2.5" src="./media/cross-vector.svg" alt="yes" />
+              <p
+                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+              >
+                Steep learning curve
+              </p>
+            </div>
+            <div class="border-b-grey-light flex gap-2 border-b px-5 py-8">
+              <img class="w-2.5" src="./media/cross-vector.svg" alt="yes" />
+              <p
+                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+              >
+                No AI assistance
+              </p>
+            </div>
+            <div class="border-b-grey-light flex gap-2 border-b px-5 py-8">
+              <img class="w-2.5" src="./media/cross-vector.svg" alt="yes" />
+              <p
+                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+              >
+                Moderate speeds
+              </p>
+            </div>
+            <div class="border-b-grey-light flex gap-2 border-b px-5 py-8">
+              <img class="w-2.5" src="./media/cross-vector.svg" alt="yes" />
+              <p
+                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+              >
+                Partial UTF-8 support
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- user-review -->
+      <section
+        class="flex flex-col items-center gap-10 px-4 pb-18 md:px-10 lg:flex-row"
+      >
+        <div class="w-full lg:min-w-147">
+          <img
+            src="./media/review-img.jpg"
+            alt="review"
+            class="h-auto w-full rounded-[30px]"
+          />
+        </div>
+        <div
+          class="border-t-grey-light flex flex-col gap-12 border-t px-4 pt-10 lg:justify-center"
+        >
+          <h3
+            class="font-crimson md:text-h3 text-2xl leading-[110%] tracking-[-4%] lg:leading-[105%]"
+          >
+            “I was skeptical, but Area has completely transformed the way I
+            manage my business. The data visualizations are so clear and
+            intuitive, and the platform is so easy to use. I can't imagine
+            running my company without it.”
+          </h3>
+          <div class="flex items-center gap-2 lg:flex-col lg:items-start">
+            <p class="text-para font-sans leading-[140%] tracking-[-0.5%]">
+              John Smith
+            </p>
+            <p
+              class="text-green-dark font-rob-mono text-[11px] leading-[140%] tracking-[-0.3%]"
+            >
+              Head of Data
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- how-to -->
+      <section class="px-4 py-10 md:px-10" id="how-to">
+        <div
+          class="border-t-grey-light flex flex-col gap-16 border-t pt-18 pb-12"
+        >
+          <div
+            class="flex flex-col items-start justify-between gap-10 md:flex-row"
+          >
+            <p class="font-crimson md:text-h2 text-4xl lg:text-6xl">
+              Map Your Success
+            </p>
+            <button
+              class="bg-green-light hover:bg-green-medium text-ui rounded-4xl px-5.5 py-3.5 leading-[140%] font-bold tracking-[-2.5%] text-black"
+            >
+              Discover More
+            </button>
+          </div>
+          <ol class="flex flex-col gap-5 md:flex-row">
+            <li
+              class="border-t-grey-light flex flex-col gap-15 border-t px-7 pt-15 pb-5"
+            >
+              <div
+                class="text-grey-medium font-dm-san text-5xl tracking-[-4%] md:text-[80px]"
+              >
+                01
+              </div>
+              <div class="flex flex-col gap-5">
+                <h3 class="font-crimson text-h4 tracking-[-3%]">Get Started</h3>
+                <p
+                  class="text-para text-grey-dark font-dm-san leading-[140%] tracking-[-5%]"
+                >
+                  With our intuitive setup, you’re up and running in minutes.
+                </p>
+              </div>
+            </li>
+            <li
+              class="border-t-grey-light flex flex-col gap-15 border-t px-7 pt-15 pb-5"
+            >
+              <div
+                class="text-grey-medium font-dm-san text-5xl tracking-[-4%] md:text-[80px]"
+              >
+                02
+              </div>
+              <div class="flex flex-col gap-5">
+                <h3 class="font-crimson text-h4 tracking-[-3%]">
+                  Customize and Configure
+                </h3>
+                <p
+                  class="text-para text-grey-dark font-dm-san leading-[140%] tracking-[-5%]"
+                >
+                  Adapt Area to your specific requirements and preferences.
+                </p>
+              </div>
+            </li>
+            <li
+              class="border-t-grey-light flex flex-col gap-15 border-t px-7 pt-15 pb-5"
+            >
+              <div
+                class="text-grey-medium font-dm-san text-5xl tracking-[-4%] md:text-[80px]"
+              >
+                03
+              </div>
+              <div class="flex flex-col gap-5">
+                <h3 class="font-crimson text-h4 tracking-[-3%]">
+                  Grow Your Business
+                </h3>
+                <p
+                  class="text-para text-grey-dark font-dm-san leading-[140%] tracking-[-5%]"
+                >
+                  Make informed decisions to exceed your goals.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+        <img
+          src="./media/footer-img.jpg"
+          alt="footer-img"
+          class="h-150 rounded-4xl object-cover lg:h-auto"
+        />
+      </section>
+      <!-- connect -->
+      <section class="px-4 md:px-10" id="connect">
+        <div class="border-grey-light border-t py-30">
+          <div
+            class="mx-auto flex flex-col items-center gap-10 md:w-130 lg:w-150"
+          >
+            <div
+              class="font-crimson md:text-h2 text-5xl leading-[95%] tracking-[-0.03%] lg:text-6xl"
+            >
+              Connect with us
+            </div>
+            <div
+              class="text-para font-dm-san text-grey-dark leading-[140%] tracking-tighter"
+            >
+              Schedule a quick call to learn how Area can turn your regional
+              data into a powerful advantage.
+            </div>
+            <button
+              class="hover:bg-green-medium bg-green-dark w-full rounded-4xl px-5.5 py-3.5"
+            >
+              <span
+                class="text-ui leading-[140%] font-semibold tracking-[-2.5%] text-white"
+              >
+                Learn More <span class="font-normal">&#8599;</span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer section -->
+    <footer class="px-4 md:px-10">
+      <div class="border-t-grey-light flex flex-col gap-20 border-t pt-10 pb-5">
+        <section
+          class="font-dm-san text-ui flex flex-col gap-7 font-bold md:flex-row"
+        >
+          <a class="hover:underline" href="#benefits">Benefits</a>
+          <a class="hover:underline" href="#specifications">Specifications</a>
+          <a class="hover:underline" href="#how-to">How-to</a>
+        </section>
+        <section class="font-rob-mono text-xxs flex items-end gap-10">
+          <!--flex-row (left to right) main-axis => justify-content && (top to bottom)cross-axis => align-items VV FOR flex-col-->
+          <img src="./media/Logo.svg" alt="" class="h-18 w-8" />
+          <p>&copy; Area.</p>
+          <p>2025</p>
+          <p class="ms-auto">All Rights Reserved</p>
+        </section>
       </div>
-    </section>
-    <img src="./media/cover-1.jpg" alt="">
-    <section class="features2">
-      <div>
-        <h2>See the Big Picture</h2>
-        <div>Area turns your data into clear, vibrant visuals that show you exactly what's happening in each region.</div>
-        <ol>
-          <li>Spot Trends in Seconds: No more digging through numbers. </li>
-          <li>Get Everyone on the Same Page: Share easy-to-understand reports with your team. </li>
-          <li>Make Presentations Pop: Interactive maps and dashboards keep your audience engaged.</li>
-          <li>Your Global Snapshot: Get a quick, clear overview of your entire operation.</li>
-        </ol>
-        <button>Discover More</button>
-      </div>
-      <img src="./media/cover-2.png" alt="">
-    </section>
-    <section class="why-choose-area">
-      <div>Specs</div>
-      <div>Why Choose Area?</div>
-      <div>You need a solution that keeps up. That’s why we developed Area. A developer-friendly approach to streamline your business.</div>
-      <button>Discover More</button>  
-      <table>
-        <thead>
-          <tr>
-            <th>Area</th>
-            <th>WebSurge</th>
-            <th>HyperView</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <img src="./media/green-check.svg" alt="">
-              <p>text</p>
-            </td>
-            <td>
-              <img src="./media/green-check.svg" alt="">
-              <p>text</p>
-            </td>
-            <td>
-              <img src="./media/green-check.svg" alt="">
-              <p>text</p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <img src="./media/green-check.svg" alt="">
-              <p>text</p>
-            </td>
-            <td>
-              <img src="./media/green-check.svg" alt="">
-              <p>text</p>
-            </td>
-            <td>
-              <img src="./media/green-check.svg" alt="">
-              <p>text</p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <img src="./media/green-check.svg" alt="">
-              <p>text</p>
-            </td>
-            <td>
-              <img src="./media/green-check.svg" alt="">
-              <p>text</p>
-            </td>
-            <td>
-              <img src="./media/green-check.svg" alt="">
-              <p>text</p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <img src="./media/green-check.svg" alt="">
-              <p>text</p>
-            </td>
-            <td>
-              <img src="./media/green-check.svg" alt="">
-              <p>text</p>
-            </td>
-            <td>
-              <img src="./media/green-check.svg" alt="">
-              <p>text</p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <img src="./media/green-check.svg" alt="">
-              <p>text</p>
-            </td>
-            <td>
-              <img src="./media/green-check.svg" alt="">
-              <p>text</p>
-            </td>
-            <td>
-              <img src="./media/green-check.svg" alt="">
-              <p>text</p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <img src="./media/green-check.svg" alt="">
-              <p>text</p>
-            </td>
-            <td>
-              <img src="./media/green-check.svg" alt="">
-              <p>text</p>
-            </td>
-            <td>
-              <img src="./media/green-check.svg" alt="">
-              <p>text</p>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-    <section class="reviews">
-      <img src="./media/review-img.jpg" alt="review">
-      <div>
-        <h3>“I was skeptical, but Area has completely transformed the way I manage my business. The data visualizations are so clear and intuitive, and the platform is so easy to use. I can't imagine running my company without it.”</h3>
-        <div>John Smith</div>
-        <div>Head of Data</div>
-      </div>
-    </section>
-    <section class="map">
-      <div>
-        <p>Map Your Success</p>
-        <button>Discover More</button>
-      </div>
-      <div>
-        <ol>
-          <li>
-            <div>Get Started</div>
-            <div>With our intuitive setup, you’re up and running in minutes.</div>
-          </li>
-          <li>
-            <div>Customize and Configure</div>
-            <div>Adapt Area to your specific requirements and preferences.</div>
-          </li>
-          <li>
-            <div>Grow Your Business</div>
-            <div>Make informed decisions to exceed your goals.</div>
-          </li>
-        </ol>
-      </div>
-    </section>
-    <img src="./media/footer-img.jpg" alt="">
-    <section class="connect-with-us">
-      <div>Connect with us</div>
-      <div>Schedule a quick call to learn how Area can turn your regional data into a powerful advantage.</div>
-      <button>Learn More&#8599;</button>
-    </section>
-  </main>
-  <footer>
-    <section class="more-pages">
-      <a target="_blank">Benefits</a>
-      <a target="_blank">Specifications</a>
-      <a target="_blank">How-to</a>
-    </section>
-    <section class="about">
-      <img src="./media/Logo.svg" alt="">
-      <p>&copy;</p>
-      <p>2025</p>
-      <p>All Rights Reserved</p> 
-    </section>
-  </footer> 
-</body>
+    </footer>
+  </body>
+
+  <!-- toggle action -->
+  <script>
+    // get buttons and menu
+    const hamburgerBtn = document.getElementById("hamburger-menu");
+    const closeMenu = document.getElementById("close-btn");
+    const menu = document.getElementById("mobile-menu");
+
+    const toggleMenu = () => {
+      menu.classList.toggle("hidden");
+    };
+
+    hamburgerBtn.addEventListener("click", toggleMenu);
+    closeMenu.addEventListener("click", toggleMenu);
+
+    // get links for closing automatically
+    const links = document.querySelectorAll("a");
+    links.forEach((link) =>
+      link.addEventListener("click", () => menu.classList.add("hidden")),
+    );
+  </script>
 </html>
