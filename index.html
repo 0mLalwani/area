@@ -1,0 +1,750 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Area</title>
+    <link rel="shortcut icon" href="/assets/Logo-CmIEqTIw.svg" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" crossorigin href="/assets/index-Ct_AKuwa.css">
+  </head>
+  <body class="relative mx-auto max-w-300">
+    <!-- fixed navbar -->
+    <nav
+      class="fixed inset-x-0 z-10 mx-auto flex w-screen max-w-300 items-center justify-between rounded-b-[20px] bg-white px-5 pt-5 pb-2 shadow-xl md:rounded-none lg:pb-0 lg:shadow-none"
+    >
+      <!-- main logo -->
+      <a href="#" class="hover:cursor-pointer">
+        <h3
+          class="font-dm-san text-3xl leading-[120%] font-medium tracking-[-8%]"
+        >
+          Area
+        </h3>
+      </a>
+
+      <!-- md and above nav links -->
+      <ul class="hidden gap-7 px-6 py-5 md:flex">
+        <a
+          href="#benefits"
+          class="font-dm-san text-sm leading-[140%] font-bold tracking-[-2.5%] hover:underline"
+          >Benefits</a
+        >
+        <a
+          href="#specifications"
+          class="font-dm-san text-sm leading-[140%] font-bold tracking-[-2.5%] hover:underline"
+          >Specifications</a
+        >
+        <a
+          href="#how-to"
+          class="font-dm-san text-sm leading-[140%] font-bold tracking-[-2.5%] hover:underline"
+          >How-to</a
+        >
+        <a
+          href="#connect"
+          class="font-dm-san text-sm leading-[140%] font-bold tracking-[-2.5%] hover:underline"
+          >Contact Us</a
+        >
+      </ul>
+
+      <!-- learn more button -->
+      <button
+        class="hover:bg-green-medium bg-green-dark hidden rounded-4xl px-5.5 py-3.5 md:block"
+      >
+        <span
+          class="text-ui leading-[140%] font-semibold tracking-[-2.5%] text-white"
+        >
+          Learn More <span class="font-normal">&#8599;</span>
+        </span>
+      </button>
+
+      <!-- mobile menu (replaces all of the above) -->
+      <div class="fixed inset-0 z-20 hidden bg-white" id="mobile-menu">
+        <div class="flex justify-between p-5 pt-5">
+          <a href="#" class="hover:cursor-pointer">
+            <h3
+              class="font-dm-san text-3xl leading-[120%] font-medium tracking-[-8%]"
+            >
+              Area
+            </h3>
+          </a>
+          <img
+            id="close-btn"
+            src="data:image/svg+xml,%3csvg%20width='9'%20height='9'%20viewBox='0%200%209%209'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M4.935%204.08333L8.16667%207.315V8.16667H7.315L4.08333%204.935L0.851667%208.16667H0V7.315L3.23167%204.08333L0%200.851667V0H0.851667L4.08333%203.23167L7.315%200H8.16667V0.851667L4.935%204.08333Z'%20fill='%236F6F6F'/%3e%3c/svg%3e"
+            alt=""
+            srcset=""
+            class="w-4.5 cursor-pointer rounded-sm hover:bg-olive-300"
+          />
+        </div>
+        <div class="px-5 pt-2 pb-8">
+          <ul class="flex w-full flex-col items-start py-5">
+            <a
+              href="#benefits"
+              class="font-dm-san border-t-grey-light w-full border-t py-12 text-sm leading-[140%] font-bold tracking-[-2.5%]"
+              >Benefits</a
+            >
+            <a
+              href="#specifications"
+              class="font-dm-san border-t-grey-light w-full border-t py-12 text-sm leading-[140%] font-bold tracking-[-2.5%]"
+              >Specifications</a
+            >
+            <a
+              href="#how-to"
+              class="font-dm-san border-t-grey-light w-full border-t py-12 text-sm leading-[140%] font-bold tracking-[-2.5%]"
+              >How-to</a
+            >
+            <a
+              href="#connect"
+              class="font-dm-san border-t-grey-light w-full border-t py-12 text-sm leading-[140%] font-bold tracking-[-2.5%]"
+              >Contact Us</a
+            >
+          </ul>
+          <button
+            class="hover:bg-green-medium bg-green-dark rounded-4xl px-5.5 py-3.5"
+          >
+            <span
+              class="text-ui leading-[140%] font-semibold tracking-[-2.5%] text-white"
+            >
+              Learn More <span class="font-normal">&#8599;</span>
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <!-- hamburger trigger -->
+      <button
+        class="cursor-pointer rounded-sm p-4 hover:bg-olive-300 md:hidden"
+        id="hamburger-menu"
+      >
+        <img src="data:image/svg+xml,%3csvg%20width='18'%20height='12'%20viewBox='0%200%2018%2012'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M0%200H18V2H0V0ZM0%205H18V7H0V5ZM0%2010H18V12H0V10Z'%20fill='black'/%3e%3c/svg%3e" alt="menu" />
+      </button>
+    </nav>
+
+    <!-- main section -->
+    <main class="lg:pt-8">
+      <!-- px-4 and h-90.5 are really doing some magic here -->
+      <!-- hero -->
+      <section
+        class="flex flex-col gap-30 px-4 pt-30 md:gap-35 lg:gap-60 lg:px-10"
+      >
+        <h1
+          class="font-crimson md:text-h1 text-center text-6xl leading-[85%] tracking-[-4.5%] lg:text-[160px]"
+        >
+          Browse everything.
+        </h1>
+        <!-- gotta use the picture element for different screensizes -->
+        <div class="bg-green-medium relative h-90.5 rounded-4xl">
+          <picture class="">
+            <source media="(min-width: 768px)" srcset="/assets/Ipad-SZ74l7EN.png" />
+            <img
+              class="absolute inset-x-0 bottom-0 mx-auto lg:w-225"
+              src="/assets/iPhone-BFqku_MH.png"
+              alt="landing-img-phone"
+            />
+          </picture>
+        </div>
+      </section>
+      <!-- trust banners -->
+      <section class="flex flex-col gap-7.5 px-4 py-12.5 md:px-10">
+        <div
+          class="font-dm-san text-para text-grey-dark leading-[140%] tracking-[-0.5%]"
+        >
+          Trusted by:
+        </div>
+        <div
+          class="grid grid-cols-2 items-center gap-10 md:grid-cols-4 lg:flex"
+        >
+          <img class="w-37.5 p-5" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAA6CAYAAABGZvzTAAAAAXNSR0IArs4c6QAABP9JREFUeF7lnNtV3DAQQOWF/4QOQgehg1BBmN0CgAqACoAKQirI5h921hWEVBBSQeggW4EUxpF99uGHJI9m/dDX7jmy9biaGWlm5ETtqSDiJ2oaAJ5jdwERP8RuY+39KwBYhbaXhD7Y5rk0TW+11nf0Dq31zWw2e2jzvrJnEfG9UupKKXWtlKLfkuVVKfVijFkmSfITAOi/UxEHsg7D9vAVAI6deutYyUrED6WUpGTU9W6ulLp3ASMKJE3TK631tjSwAukgjHVQdwBwX0dODEiapudaa1op24UNSMdh5ON++W86y9WYCJAaGNRJFiA9gZFDIZtyWgYlOpDHx8ezg4MDrBHT1kB6BqMWSlQgiPhRKUXGtW6X0wpIT2EU6gsATtYXazQgjjBaqayew8g5PADATf4nChAPGMFA7DmDpI+ksO/lBADI2Ct2IAGr1ltlDQwGcXgGgFN2IAEwvCVkgDBy6aZd1zObhATCCAFCO7azvuuo7f4bY75Op9NrFiAtYHgBQcRvb+eWi6HBsOMhp+RRayAtYTgDGTiMfI2dtALCAMMJCCJ+sV7bgQrH/2FprS+DgVjj+ovBo1q7yyrxDg8WCtmRICDMO51KIGOCYVfZ3BsIM4xKlTVCGNl5JAQIqSnO0/GOhIwUhj+QSDudDSAjhqGMMamzhESCsaGyxgyDJsLZqEeEUQBpCGINdme1PjBK+GiUEIFV+zqZTO4qwrujALE2yNNaIAIwMjE1xmSu5y6Uw8PDd1pr8pVleWOCJbOllUAkYFDu0nbETHACaptCRMobuxXszxwAyk/qUjBsoD84yy/2ZCEiBcCkJOWYkh52JOTp6eliMpmQVzVmoawLipJ1FgYNfrFYPCRJQtmPsUsmHdTIBhAmZ6FL57NgjEvFfdYRBJJJxw6QxWIxT5LkPPYkvGXvNe7uYvfB5f2I+IfBeVrblNb6fjabZXnOG0BsNjrpTIly1HV1JWRHl5TCuD7hxUqVNGDbq0JiBfi0IQSj1I5mQKztIPGUKmTMyY505vyRD7wiIZx7XupTSRGR7lBQVE66LLXWv6UbrWmPvAYSO8zSvN7Chkiqqw5N/kZXjDHfkySh7PyYdrRSMjaMOiL+3cMtoy6xyYxr5I1NI4xMQmwEkICMtZAdIxWyigjECUYOhKJ/FAUcYylg2M0NuUm4VZYzjBxIjE70Ae4GjEhAvHeTpLLGCKR01TLPhTeMXELopqrkGWTf0lOpQhiBBMEYo1Gv1eeMQGjTtgxZeflJPboTLaRzzM80GlcmIJcAUHbb2Gk4GRApL69Tj+JUaoTBZNRbwShO6kJBqThT3fxWJxgMQG4AoPUnQnKVRbdkSW1JfxOkeTrb1SDjSpFJp2+NhKosTu914X4XjI61m2L3p713OiFAOGEUKsuK65C2v94wQlQWN4wNINa4SwX13dd5WM3imrHP4z4SEgPGDhDGSzg+88BdN3in4wokFowdIFZs++xsDIbhqrJiwigFYjtGN11jR846Ixl5R5okhIJY0+k06i3gynScPYZ1vUFxrdo6IBIwKiVka8WQpHTlU3k7sLhg1KksKRiNQPLtsDHmTiKBzlc0OGHUANmJm/j206e+cwYhfeHHGHPdITAsror1ySpRWaIwnCRkm67N4aKg1meryjgvgDYtppXNDqFvTDm5Q5peuAWEXEf53XtxGEFAfAbY17qkDfaVxPcPotPd876US8UAAAAASUVORK5CYII=" alt="" />
+          <img class="w-37.5 p-5" src="data:image/png;base64,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" alt="" />
+          <img class="w-37.5 p-5" src="data:image/png;base64,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" alt="" />
+          <img class="w-37.5 p-5" src="data:image/png;base64,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" alt="" />
+          <img
+            class="w-37.5 p-5 md:col-start-2"
+            src="/assets/trusted-by-5-sRy6hkPO.png"
+            alt=""
+          />
+          <img class="w-37.5 p-5" src="data:image/png;base64,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" alt="" />
+        </div>
+      </section>
+      <!-- benefits -->
+      <section class="px-4 md:px-10" id="benefits">
+        <div
+          class="border-t-0.5 border-t-grey-light flex flex-col gap-12 border-t pt-20 pb-15"
+        >
+          <div class="flex flex-col gap-7.5 pr-5">
+            <div
+              class="font-rob-mono text-green-dark text-[11px] leading-[140%] tracking-[-3%] lg:text-xs"
+            >
+              Benefits
+            </div>
+            <h2
+              class="font-crimson md:text-h2 text-[50px] leading-[-95%] tracking-[-3%] lg:text-6xl"
+            >
+              We've cracked the code.
+            </h2>
+            <div
+              class="text-grey-dark font-dm-san text-para leading-[140%] tracking-[-0.5%]"
+            >
+              Area provides real insights without the data overload.
+            </div>
+          </div>
+          <ul class="grid grid-cols-1 gap-5 pt-10 md:grid-cols-2 lg:flex">
+            <li
+              class="border-t-grey-light flex flex-col gap-6 border-t py-10 pr-5"
+            >
+              <img src="data:image/svg+xml,%3csvg%20width='21'%20height='20'%20viewBox='0%200%2021%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M5.2425%201.0125C3.8725%202.3925%203.8725%204.6125%205.2425%205.9825L13.7325%2014.4625C14.3125%2015.0525%2014.3125%2016.0125%2013.7325%2016.5825C13.1425%2017.1725%2012.1925%2017.1725%2011.6025%2016.5825L7.3625%2012.3425L8.4225%2011.2825L4.8925%207.7425L4.5325%208.1025L3.1225%206.6825C2.7325%206.2925%202.1025%206.2925%201.6925%206.6825L0.2925%208.1025C-0.0975%208.5125%20-0.0975%209.1225%200.2925%209.5125L1.6925%2010.9225L1.3525%2011.2825L4.8925%2014.8125L5.9525%2013.7525L10.1925%2018.0125C11.5625%2019.3625%2013.7725%2019.3625%2015.1425%2018.0125C16.5125%2016.6325%2016.5125%2014.4125%2015.1425%2013.0525L6.6525%204.5625C6.0725%203.9725%206.0725%203.0125%206.6525%202.4425C7.2425%201.8525%208.1925%201.8525%208.7825%202.4425L13.0225%206.6825L11.9625%207.7425L15.4925%2011.2825L15.8525%2010.9225L17.2625%2012.3425C17.6525%2012.7325%2018.2925%2012.7325%2018.6925%2012.3425L20.0925%2010.9225C20.4825%2010.5125%2020.4825%209.9025%2020.0925%209.5125L18.6925%208.1025L19.0325%207.7425L15.4925%204.2125L14.4325%205.2725L10.1925%201.0125C8.8225%20-0.3375%206.6125%20-0.3375%205.2425%201.0125ZM1.0025%208.8025L2.4125%207.3925L3.8325%208.8025L2.4125%2010.2225M16.5525%2010.2225L17.9725%208.8025L19.3825%2010.2225L17.9725%2011.6325L16.5525%2010.2225Z'%20fill='black'/%3e%3c/svg%3e" alt="" class="w-6" />
+              <div class="font-crimson text-h4 tracking-[-3%]">
+                Amplify Insights
+              </div>
+              <div
+                class="font-dm-san text-para text-grey-dark leading-[140%] tracking-[-0.5%]"
+              >
+                Unlock data-driven decisions with comprehensive analytics,
+                revealing key opportunities for strategic regional growth.
+              </div>
+            </li>
+            <li
+              class="border-t-grey-light flex flex-col gap-6 border-t py-10 pr-5"
+            >
+              <img src="data:image/svg+xml,%3csvg%20width='20'%20height='20'%20viewBox='0%200%2020%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15.9%2015.39C15.64%2014.59%2014.89%2014%2014%2014H13V11C13%2010.7348%2012.8946%2010.4804%2012.7071%2010.2929C12.5196%2010.1054%2012.2652%2010%2012%2010H6V8H8C8.26522%208%208.51957%207.89464%208.70711%207.70711C8.89464%207.51957%209%207.26522%209%207V5H11C11.5304%205%2012.0391%204.78929%2012.4142%204.41421C12.7893%204.03914%2013%203.53043%2013%203V2.59C15.93%203.77%2018%206.64%2018%2010C18%2012.08%2017.2%2013.97%2015.9%2015.39ZM9%2017.93C5.05%2017.44%202%2014.08%202%2010C2%209.38%202.08%208.78%202.21%208.21L7%2013V14C7%2014.5304%207.21071%2015.0391%207.58579%2015.4142C7.96086%2015.7893%208.46957%2016%209%2016M10%200C8.68678%200%207.38642%200.258658%206.17317%200.761205C4.95991%201.26375%203.85752%202.00035%202.92893%202.92893C1.05357%204.8043%200%207.34784%200%2010C0%2012.6522%201.05357%2015.1957%202.92893%2017.0711C3.85752%2017.9997%204.95991%2018.7362%206.17317%2019.2388C7.38642%2019.7413%208.68678%2020%2010%2020C12.6522%2020%2015.1957%2018.9464%2017.0711%2017.0711C18.9464%2015.1957%2020%2012.6522%2020%2010C20%208.68678%2019.7413%207.38642%2019.2388%206.17317C18.7362%204.95991%2017.9997%203.85752%2017.0711%202.92893C16.1425%202.00035%2015.0401%201.26375%2013.8268%200.761205C12.6136%200.258658%2011.3132%200%2010%200Z'%20fill='black'/%3e%3c/svg%3e" alt="" class="w-6" />
+              <div class="font-crimson text-h4 tracking-[-3%]">
+                Control Your Global Presence
+              </div>
+              <div
+                class="font-dm-san text-para text-grey-dark leading-[140%] tracking-[-0.5%]"
+              >
+                Manage and track satellite offices, ensuring consistent
+                performance and streamlined operations everywhere.
+              </div>
+            </li>
+            <li
+              class="border-t-grey-light flex flex-col gap-6 border-t py-10 pr-5"
+            >
+              <img src="data:image/svg+xml,%3csvg%20width='22'%20height='19'%20viewBox='0%200%2022%2019'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M8%203C9.06087%203%2010.0783%203.42143%2010.8284%204.17157C11.5786%204.92172%2012%205.93913%2012%207C12%208.06087%2011.5786%209.07828%2010.8284%209.82843C10.0783%2010.5786%209.06087%2011%208%2011C6.93913%2011%205.92172%2010.5786%205.17157%209.82843C4.42143%209.07828%204%208.06087%204%207C4%205.93913%204.42143%204.92172%205.17157%204.17157C5.92172%203.42143%206.93913%203%208%203ZM8%2013C10.67%2013%2016%2014.34%2016%2017V19H0V17C0%2014.34%205.33%2013%208%2013ZM15.76%203.36C17.78%205.56%2017.78%208.61%2015.76%2010.63L14.08%208.94C14.92%207.76%2014.92%206.23%2014.08%205.05L15.76%203.36ZM19.07%200C23%204.05%2022.97%2010.11%2019.07%2014L17.44%2012.37C20.21%209.19%2020.21%204.65%2017.44%201.63L19.07%200Z'%20fill='black'/%3e%3c/svg%3e" alt="" class="w-6" />
+              <div class="font-crimson text-h4 tracking-[-3%]">
+                Remove Language Barriers
+              </div>
+              <div
+                class="font-dm-san text-para text-grey-dark leading-[140%] tracking-[-0.5%]"
+              >
+                Adapt to diverse markets with built-in localization for clear
+                communication and enhanced user experience.
+              </div>
+            </li>
+            <li
+              class="border-t-grey-light flex flex-col gap-6 border-t py-10 pr-5"
+            >
+              <img src="data:image/svg+xml,%3csvg%20width='22'%20height='12'%20viewBox='0%200%2022%2012'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M2%208L2.5%208.07L7.07%203.5C6.89%202.85%207.06%202.11%207.59%201.59C8.37%200.8%209.63%200.8%2010.41%201.59C10.94%202.11%2011.11%202.85%2010.93%203.5L13.5%206.07L14%206C14.18%206%2014.35%206%2014.5%206.07L18.07%202.5C18%202.35%2018%202.18%2018%202C18%201.46957%2018.2107%200.960859%2018.5858%200.585786C18.9609%200.210714%2019.4696%200%2020%200C20.5304%200%2021.0391%200.210714%2021.4142%200.585786C21.7893%200.960859%2022%201.46957%2022%202C22%202.53043%2021.7893%203.03914%2021.4142%203.41421C21.0391%203.78929%2020.5304%204%2020%204C19.82%204%2019.65%204%2019.5%203.93L15.93%207.5C16%207.65%2016%207.82%2016%208C16%208.53043%2015.7893%209.03914%2015.4142%209.41421C15.0391%209.78929%2014.5304%2010%2014%2010C13.4696%2010%2012.9609%209.78929%2012.5858%209.41421C12.2107%209.03914%2012%208.53043%2012%208L12.07%207.5L9.5%204.93C9.18%205%208.82%205%208.5%204.93L3.93%209.5L4%2010C4%2010.5304%203.78929%2011.0391%203.41421%2011.4142C3.03914%2011.7893%202.53043%2012%202%2012C1.46957%2012%200.960859%2011.7893%200.585786%2011.4142C0.210714%2011.0391%200%2010.5304%200%2010C0%209.46957%200.210714%208.96086%200.585786%208.58579C0.960859%208.21071%201.46957%208%202%208Z'%20fill='black'/%3e%3c/svg%3e" alt="" class="w-6" />
+              <div class="font-crimson text-h4 tracking-[-3%]">
+                Visualize Growth
+              </div>
+              <div
+                class="font-dm-san text-para text-grey-dark leading-[140%] tracking-[-0.5%]"
+              >
+                Generate precise, visually compelling reports that illustrate
+                your growth trajectories across all regions.
+              </div>
+            </li>
+          </ul>
+        </div>
+        <img
+          src="/assets/cover-1-CwddgWj0.jpg"
+          alt=""
+          class="h-150 rounded-4xl object-cover"
+        />
+      </section>
+      <!-- see the big picture -->
+      <section
+        class="px-4 pt-12 pb-20 md:px-10 lg:flex lg:items-center lg:gap-5"
+      >
+        <div class="flex flex-col gap-10 pt-15 lg:w-147">
+          <div
+            class="border-t-grey-light flex flex-col items-start gap-10 border-t pt-15 pb-20"
+          >
+            <h2
+              class="font-crimson text-h3 md:text-h2 leading-[95%] tracking-[-3%] lg:text-6xl"
+            >
+              See the Big Picture
+            </h2>
+            <div
+              class="text-para font-dm-san text-grey-dark leading-[140%] tracking-[-0.5%]"
+            >
+              Area turns your data into clear, vibrant visuals that show you
+              exactly what's happening in each region.
+            </div>
+            <ol>
+              <li class="border-t-grey-light flex gap-7 border-t py-5">
+                <h3
+                  class="font-dm-san text-para text-grey-dark leading-[140%] font-bold tracking-[-0.5%]"
+                >
+                  01
+                </h3>
+                <p
+                  class="font-dm-san text-para leading-[140%] tracking-[-0.5%]"
+                >
+                  Spot Trends in Seconds: No more digging through numbers.
+                </p>
+              </li>
+              <li class="border-t-grey-light flex gap-7 border-t py-5">
+                <h3
+                  class="font-dm-san text-para text-grey-dark leading-[140%] font-bold tracking-[-0.5%]"
+                >
+                  02
+                </h3>
+                <p
+                  class="font-dm-san text-para leading-[140%] tracking-[-0.5%]"
+                >
+                  Get Everyone on the Same Page: Share easy-to-understand
+                  reports with your team.
+                </p>
+              </li>
+              <li class="border-t-grey-light flex gap-7 border-t py-5">
+                <h3
+                  class="font-dm-san text-para text-grey-dark leading-[140%] font-bold tracking-[-0.5%]"
+                >
+                  03
+                </h3>
+                <p
+                  class="font-dm-san text-para leading-[140%] tracking-[-0.5%]"
+                >
+                  Make Presentations Pop: Interactive maps and dashboards keep
+                  your audience engaged.
+                </p>
+              </li>
+              <li class="border-t-grey-light flex gap-7 border-t py-5">
+                <h3
+                  class="font-dm-san text-para text-grey-dark leading-[140%] font-bold tracking-[-0.5%]"
+                >
+                  04
+                </h3>
+                <p
+                  class="font-dm-san text-para leading-[140%] tracking-[-0.5%]"
+                >
+                  Your Global Snapshot: Get a quick, clear overview of your
+                  entire operation.
+                </p>
+              </li>
+            </ol>
+            <button
+              class="bg-green-light hover:bg-green-medium text-ui rounded-4xl px-5.5 py-3.5 leading-[140%] font-bold tracking-[-2.5%] text-black"
+            >
+              Discover More
+            </button>
+          </div>
+        </div>
+        <img
+          src="/assets/cover-2-6EQM06PZ.png"
+          alt=""
+          class="mx-auto w-screen lg:h-161 lg:w-147"
+        />
+      </section>
+      <!-- specifications -->
+      <section
+        id="specifications"
+        class="flex flex-col items-center gap-2 pb-30 md:px-10"
+      >
+        <div
+          class="border-t-grey-medium flex flex-col items-center gap-8 border-t px-4 py-20 text-center md:max-w-140"
+        >
+          <div
+            class="text-xxs font-rob-mono text-green-dark leading-[140%] tracking-[-3%] lg:text-xs"
+          >
+            Specs
+          </div>
+          <div
+            class="font-crimson text-h3 md:text-h2 leading-[95%] tracking-[-3%] lg:text-6xl"
+          >
+            Why Choose Area?
+          </div>
+          <div
+            class="text-grey-dark text-para font-dm-sans leading-[140%] tracking-[-0.5%]"
+          >
+            You need a solution that keeps up. That’s why we developed Area. A
+            developer-friendly approach to streamline your business.
+          </div>
+          <button
+            class="bg-green-light hover:bg-green-medium text-ui rounded-4xl px-5.5 py-3.5 leading-[140%] font-bold tracking-[-2.5%] text-black"
+          >
+            Discover More
+          </button>
+        </div>
+        <div class="flex w-full rounded-2xl p-0.5">
+          <div
+            class="border-grey-light min-w-0 flex-1 rounded-2xl border shadow-sm md:shadow-xl"
+          >
+            <h3
+              class="font-dm-san border-b-grey-medium min-w-0 gap-4 border-b px-7.5 py-10 text-center text-xl leading-[120%] font-medium tracking-[-8%]"
+            >
+              Area
+            </h3>
+            <div
+              class="border-b-grey-light flex min-w-0 gap-2 border-b px-5 py-8"
+            >
+              <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='11'%20height='8'%20viewBox='0%200%2011%208'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M10.2083%200.8225L3.20833%207.8225L0%204.61417L0.8225%203.79167L3.20833%206.17167L9.38583%200L10.2083%200.8225Z'%20fill='%23485C11'/%3e%3c/svg%3e" alt="yes" />
+              <p
+                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+              >
+                Ultra-fast browsing
+              </p>
+            </div>
+            <div class="border-b-grey-light flex gap-2 border-b px-5 py-8">
+              <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='11'%20height='8'%20viewBox='0%200%2011%208'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M10.2083%200.8225L3.20833%207.8225L0%204.61417L0.8225%203.79167L3.20833%206.17167L9.38583%200L10.2083%200.8225Z'%20fill='%23485C11'/%3e%3c/svg%3e" alt="yes" />
+              <p
+                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+              >
+                Advanced AI insights
+              </p>
+            </div>
+            <div class="border-b-grey-light flex gap-2 border-b px-5 py-8">
+              <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='11'%20height='8'%20viewBox='0%200%2011%208'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M10.2083%200.8225L3.20833%207.8225L0%204.61417L0.8225%203.79167L3.20833%206.17167L9.38583%200L10.2083%200.8225Z'%20fill='%23485C11'/%3e%3c/svg%3e" alt="yes" />
+              <p
+                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+              >
+                Seamless integration
+              </p>
+            </div>
+            <div class="border-b-grey-light flex gap-2 border-b px-5 py-8">
+              <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='11'%20height='8'%20viewBox='0%200%2011%208'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M10.2083%200.8225L3.20833%207.8225L0%204.61417L0.8225%203.79167L3.20833%206.17167L9.38583%200L10.2083%200.8225Z'%20fill='%23485C11'/%3e%3c/svg%3e" alt="yes" />
+              <p
+                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+              >
+                Advanced AI insights
+              </p>
+            </div>
+            <div class="border-b-grey-light flex gap-2 border-b px-5 py-8">
+              <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='11'%20height='8'%20viewBox='0%200%2011%208'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M10.2083%200.8225L3.20833%207.8225L0%204.61417L0.8225%203.79167L3.20833%206.17167L9.38583%200L10.2083%200.8225Z'%20fill='%23485C11'/%3e%3c/svg%3e" alt="yes" />
+              <p
+                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+              >
+                Ultra-fast browsing
+              </p>
+            </div>
+            <div class="border-b-grey-light flex gap-2 px-5 py-8">
+              <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='11'%20height='8'%20viewBox='0%200%2011%208'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M10.2083%200.8225L3.20833%207.8225L0%204.61417L0.8225%203.79167L3.20833%206.17167L9.38583%200L10.2083%200.8225Z'%20fill='%23485C11'/%3e%3c/svg%3e" alt="yes" />
+              <p
+                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+              >
+                Full UTF-8 support
+              </p>
+            </div>
+          </div>
+          <div class="min-w-0 flex-1 rounded-2xl border-y border-y-transparent">
+            <h3
+              class="font-dm-san border-b-grey-medium text-grey-dark min-w-0 gap-4 border-b px-7.5 py-10 text-center text-xl leading-[120%] font-medium tracking-[-8%]"
+            >
+              WebSurge
+            </h3>
+            <div
+              class="border-r-grey-light border-b-grey-light flex min-w-0 gap-2 border-r border-b px-5 py-8"
+            >
+              <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='11'%20height='8'%20viewBox='0%200%2011%208'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M10.2083%200.8225L3.20833%207.8225L0%204.61417L0.8225%203.79167L3.20833%206.17167L9.38583%200L10.2083%200.8225Z'%20fill='%236F6F6F'/%3e%3c/svg%3e" alt="yes" />
+              <p
+                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+              >
+                Fast browsing
+              </p>
+            </div>
+            <div
+              class="border-r-grey-light border-b-grey-light flex gap-2 border-r border-b px-5 py-8"
+            >
+              <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='11'%20height='8'%20viewBox='0%200%2011%208'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M10.2083%200.8225L3.20833%207.8225L0%204.61417L0.8225%203.79167L3.20833%206.17167L9.38583%200L10.2083%200.8225Z'%20fill='%236F6F6F'/%3e%3c/svg%3e" alt="yes" />
+              <p
+                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+              >
+                Basic AI recommendations
+              </p>
+            </div>
+            <div
+              class="border-r-grey-light border-b-grey-light flex gap-2 border-r border-b px-5 py-8"
+            >
+              <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='11'%20height='8'%20viewBox='0%200%2011%208'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M10.2083%200.8225L3.20833%207.8225L0%204.61417L0.8225%203.79167L3.20833%206.17167L9.38583%200L10.2083%200.8225Z'%20fill='%236F6F6F'/%3e%3c/svg%3e" alt="yes" />
+              <p
+                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+              >
+                Restricts customization
+              </p>
+            </div>
+            <div
+              class="border-r-grey-light border-b-grey-light flex gap-2 border-r border-b px-5 py-8"
+            >
+              <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='9'%20height='9'%20viewBox='0%200%209%209'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M4.935%204.08333L8.16667%207.315V8.16667H7.315L4.08333%204.935L0.851667%208.16667H0V7.315L3.23167%204.08333L0%200.851667V0H0.851667L4.08333%203.23167L7.315%200H8.16667V0.851667L4.935%204.08333Z'%20fill='%236F6F6F'/%3e%3c/svg%3e" alt="yes" />
+              <p
+                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+              >
+                Basic AI insights
+              </p>
+            </div>
+            <div
+              class="border-r-grey-light border-b-grey-light flex gap-2 border-r border-b px-5 py-8"
+            >
+              <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='11'%20height='8'%20viewBox='0%200%2011%208'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M10.2083%200.8225L3.20833%207.8225L0%204.61417L0.8225%203.79167L3.20833%206.17167L9.38583%200L10.2083%200.8225Z'%20fill='%236F6F6F'/%3e%3c/svg%3e" alt="yes" />
+              <p
+                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+              >
+                Fast browsing
+              </p>
+            </div>
+            <div
+              class="border-r-grey-light border-b-grey-light flex gap-2 border-r border-b px-5 py-8"
+            >
+              <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='9'%20height='9'%20viewBox='0%200%209%209'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M4.935%204.08333L8.16667%207.315V8.16667H7.315L4.08333%204.935L0.851667%208.16667H0V7.315L3.23167%204.08333L0%200.851667V0H0.851667L4.08333%203.23167L7.315%200H8.16667V0.851667L4.935%204.08333Z'%20fill='%236F6F6F'/%3e%3c/svg%3e" alt="yes" />
+              <p
+                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+              >
+                Potential display errors
+              </p>
+            </div>
+          </div>
+          <div class="min-w-0 flex-1 rounded-2xl border-y border-y-transparent">
+            <h3
+              class="font-dm-san border-b-grey-medium text-grey-dark min-w-0 gap-4 border-b px-7.5 py-10 text-center text-xl leading-[120%] font-medium tracking-[-8%]"
+            >
+              HyperView
+            </h3>
+            <div
+              class="border-b-grey-light flex min-w-0 gap-2 border-b px-5 py-8"
+            >
+              <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='9'%20height='9'%20viewBox='0%200%209%209'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M4.935%204.08333L8.16667%207.315V8.16667H7.315L4.08333%204.935L0.851667%208.16667H0V7.315L3.23167%204.08333L0%200.851667V0H0.851667L4.08333%203.23167L7.315%200H8.16667V0.851667L4.935%204.08333Z'%20fill='%236F6F6F'/%3e%3c/svg%3e" alt="yes" />
+              <p
+                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+              >
+                Moderate speeds
+              </p>
+            </div>
+            <div class="border-b-grey-light flex gap-2 border-b px-5 py-8">
+              <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='9'%20height='9'%20viewBox='0%200%209%209'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M4.935%204.08333L8.16667%207.315V8.16667H7.315L4.08333%204.935L0.851667%208.16667H0V7.315L3.23167%204.08333L0%200.851667V0H0.851667L4.08333%203.23167L7.315%200H8.16667V0.851667L4.935%204.08333Z'%20fill='%236F6F6F'/%3e%3c/svg%3e" alt="yes" />
+              <p
+                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+              >
+                No AI assistance
+              </p>
+            </div>
+            <div class="border-b-grey-light flex gap-2 border-b px-5 py-8">
+              <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='9'%20height='9'%20viewBox='0%200%209%209'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M4.935%204.08333L8.16667%207.315V8.16667H7.315L4.08333%204.935L0.851667%208.16667H0V7.315L3.23167%204.08333L0%200.851667V0H0.851667L4.08333%203.23167L7.315%200H8.16667V0.851667L4.935%204.08333Z'%20fill='%236F6F6F'/%3e%3c/svg%3e" alt="yes" />
+              <p
+                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+              >
+                Steep learning curve
+              </p>
+            </div>
+            <div class="border-b-grey-light flex gap-2 border-b px-5 py-8">
+              <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='9'%20height='9'%20viewBox='0%200%209%209'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M4.935%204.08333L8.16667%207.315V8.16667H7.315L4.08333%204.935L0.851667%208.16667H0V7.315L3.23167%204.08333L0%200.851667V0H0.851667L4.08333%203.23167L7.315%200H8.16667V0.851667L4.935%204.08333Z'%20fill='%236F6F6F'/%3e%3c/svg%3e" alt="yes" />
+              <p
+                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+              >
+                No AI assistance
+              </p>
+            </div>
+            <div class="border-b-grey-light flex gap-2 border-b px-5 py-8">
+              <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='9'%20height='9'%20viewBox='0%200%209%209'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M4.935%204.08333L8.16667%207.315V8.16667H7.315L4.08333%204.935L0.851667%208.16667H0V7.315L3.23167%204.08333L0%200.851667V0H0.851667L4.08333%203.23167L7.315%200H8.16667V0.851667L4.935%204.08333Z'%20fill='%236F6F6F'/%3e%3c/svg%3e" alt="yes" />
+              <p
+                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+              >
+                Moderate speeds
+              </p>
+            </div>
+            <div class="border-b-grey-light flex gap-2 border-b px-5 py-8">
+              <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='9'%20height='9'%20viewBox='0%200%209%209'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M4.935%204.08333L8.16667%207.315V8.16667H7.315L4.08333%204.935L0.851667%208.16667H0V7.315L3.23167%204.08333L0%200.851667V0H0.851667L4.08333%203.23167L7.315%200H8.16667V0.851667L4.935%204.08333Z'%20fill='%236F6F6F'/%3e%3c/svg%3e" alt="yes" />
+              <p
+                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+              >
+                Partial UTF-8 support
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- user-review -->
+      <section
+        class="flex flex-col items-center gap-10 px-4 pb-18 md:px-10 lg:flex-row"
+      >
+        <div class="w-full lg:min-w-147">
+          <img
+            src="/assets/review-img-BwWa1MnA.jpg"
+            alt="review"
+            class="h-auto w-full rounded-[30px]"
+          />
+        </div>
+        <div
+          class="border-t-grey-light flex flex-col gap-12 border-t px-4 pt-10 lg:justify-center"
+        >
+          <h3
+            class="font-crimson md:text-h3 text-2xl leading-[110%] tracking-[-4%] lg:leading-[105%]"
+          >
+            “I was skeptical, but Area has completely transformed the way I
+            manage my business. The data visualizations are so clear and
+            intuitive, and the platform is so easy to use. I can't imagine
+            running my company without it.”
+          </h3>
+          <div class="flex items-center gap-2 lg:flex-col lg:items-start">
+            <p class="text-para font-sans leading-[140%] tracking-[-0.5%]">
+              John Smith
+            </p>
+            <p
+              class="text-green-dark font-rob-mono text-[11px] leading-[140%] tracking-[-0.3%]"
+            >
+              Head of Data
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- how-to -->
+      <section class="px-4 py-10 md:px-10" id="how-to">
+        <div
+          class="border-t-grey-light flex flex-col gap-16 border-t pt-18 pb-12"
+        >
+          <div
+            class="flex flex-col items-start justify-between gap-10 md:flex-row"
+          >
+            <p class="font-crimson md:text-h2 text-4xl lg:text-6xl">
+              Map Your Success
+            </p>
+            <button
+              class="bg-green-light hover:bg-green-medium text-ui rounded-4xl px-5.5 py-3.5 leading-[140%] font-bold tracking-[-2.5%] text-black"
+            >
+              Discover More
+            </button>
+          </div>
+          <ol class="flex flex-col gap-5 md:flex-row">
+            <li
+              class="border-t-grey-light flex flex-col gap-15 border-t px-7 pt-15 pb-5"
+            >
+              <div
+                class="text-grey-medium font-dm-san text-5xl tracking-[-4%] md:text-[80px]"
+              >
+                01
+              </div>
+              <div class="flex flex-col gap-5">
+                <h3 class="font-crimson text-h4 tracking-[-3%]">Get Started</h3>
+                <p
+                  class="text-para text-grey-dark font-dm-san leading-[140%] tracking-[-5%]"
+                >
+                  With our intuitive setup, you’re up and running in minutes.
+                </p>
+              </div>
+            </li>
+            <li
+              class="border-t-grey-light flex flex-col gap-15 border-t px-7 pt-15 pb-5"
+            >
+              <div
+                class="text-grey-medium font-dm-san text-5xl tracking-[-4%] md:text-[80px]"
+              >
+                02
+              </div>
+              <div class="flex flex-col gap-5">
+                <h3 class="font-crimson text-h4 tracking-[-3%]">
+                  Customize and Configure
+                </h3>
+                <p
+                  class="text-para text-grey-dark font-dm-san leading-[140%] tracking-[-5%]"
+                >
+                  Adapt Area to your specific requirements and preferences.
+                </p>
+              </div>
+            </li>
+            <li
+              class="border-t-grey-light flex flex-col gap-15 border-t px-7 pt-15 pb-5"
+            >
+              <div
+                class="text-grey-medium font-dm-san text-5xl tracking-[-4%] md:text-[80px]"
+              >
+                03
+              </div>
+              <div class="flex flex-col gap-5">
+                <h3 class="font-crimson text-h4 tracking-[-3%]">
+                  Grow Your Business
+                </h3>
+                <p
+                  class="text-para text-grey-dark font-dm-san leading-[140%] tracking-[-5%]"
+                >
+                  Make informed decisions to exceed your goals.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+        <img
+          src="/assets/footer-img-C4iwlUfA.jpg"
+          alt="footer-img"
+          class="h-150 rounded-4xl object-cover lg:h-auto"
+        />
+      </section>
+      <!-- connect -->
+      <section class="px-4 md:px-10" id="connect">
+        <div class="border-grey-light border-t py-30">
+          <div
+            class="mx-auto flex flex-col items-center gap-10 md:w-130 lg:w-150"
+          >
+            <div
+              class="font-crimson md:text-h2 text-5xl leading-[95%] tracking-[-0.03%] lg:text-6xl"
+            >
+              Connect with us
+            </div>
+            <div
+              class="text-para font-dm-san text-grey-dark leading-[140%] tracking-tighter"
+            >
+              Schedule a quick call to learn how Area can turn your regional
+              data into a powerful advantage.
+            </div>
+            <button
+              class="hover:bg-green-medium bg-green-dark w-full rounded-4xl px-5.5 py-3.5"
+            >
+              <span
+                class="text-ui leading-[140%] font-semibold tracking-[-2.5%] text-white"
+              >
+                Learn More <span class="font-normal">&#8599;</span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer section -->
+    <footer class="px-4 md:px-10">
+      <div class="border-t-grey-light flex flex-col gap-20 border-t pt-10 pb-5">
+        <section
+          class="font-dm-san text-ui flex flex-col gap-7 font-bold md:flex-row"
+        >
+          <a class="hover:underline" href="#benefits">Benefits</a>
+          <a class="hover:underline" href="#specifications">Specifications</a>
+          <a class="hover:underline" href="#how-to">How-to</a>
+        </section>
+        <section class="font-rob-mono text-xxs flex items-end gap-10">
+          <!--flex-row (left to right) main-axis => justify-content && (top to bottom)cross-axis => align-items VV FOR flex-col-->
+          <img src="data:image/svg+xml,%3csvg%20width='32'%20height='70'%20viewBox='0%200%2032%2070'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M22.3379%2021.5869L31.751%2032.6748L27.9258%2035.9121L22.3379%2029.3125V45H24.8379V70H19.8379V45H17.3379V15H22.3379V21.5869ZM12.4248%2044.999L7.83789%2069.999H2.75L7.33789%2044.999H12.4248ZM4.6748%2035.8877L0%2034.1123L7.22461%2015H12.5752L4.6748%2035.8877ZM17.3389%209.9502H12.3389V0H17.3389V9.9502Z'%20fill='black'/%3e%3c/svg%3e" alt="" class="h-18 w-8" />
+          <p>&copy; Area.</p>
+          <p>2025</p>
+          <p class="ms-auto">All Rights Reserved</p>
+        </section>
+      </div>
+    </footer>
+  </body>
+
+  <!-- toggle action -->
+  <script>
+    // get buttons and menu
+    const hamburgerBtn = document.getElementById("hamburger-menu");
+    const closeMenu = document.getElementById("close-btn");
+    const menu = document.getElementById("mobile-menu");
+
+    const toggleMenu = () => {
+      menu.classList.toggle("hidden");
+    };
+
+    hamburgerBtn.addEventListener("click", toggleMenu);
+    closeMenu.addEventListener("click", toggleMenu);
+
+    // get links for closing automatically
+    const links = document.querySelectorAll("a");
+    links.forEach((link) =>
+      link.addEventListener("click", () => menu.classList.add("hidden")),
+    );
+  </script>
+</html>
