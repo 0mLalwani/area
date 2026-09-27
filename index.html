@@ -18,7 +18,7 @@
   <body class="relative mx-auto max-w-300">
     <!-- fixed navbar -->
     <nav
-      class="fixed inset-x-0 z-10 mx-auto flex w-screen max-w-300 items-center justify-between rounded-b-[20px] bg-white px-5 pt-5 pb-2 shadow-xl md:rounded-none lg:pb-0 lg:shadow-none"
+      class="fixed inset-x-0 z-10 mx-auto flex w-screen max-w-300 items-center justify-between rounded-b-[20px] bg-white px-5 pt-5 pb-2 shadow-sm md:rounded-none lg:pb-0 lg:shadow-none"
     >
       <!-- main logo -->
       <a href="#" class="hover:cursor-pointer">
@@ -65,7 +65,10 @@
       </button>
 
       <!-- mobile menu (replaces all of the above) -->
-      <div class="fixed inset-0 z-20 hidden bg-white" id="mobile-menu">
+      <div
+        class="fixed inset-0 z-20 hidden bg-white px-3 pt-1"
+        id="mobile-menu"
+      >
         <div class="flex justify-between p-5 pt-5">
           <a href="#" class="hover:cursor-pointer">
             <h3
