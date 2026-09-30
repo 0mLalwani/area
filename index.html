@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Area</title>
-    <link rel="shortcut icon" href="/area/assets/Logo-CmIEqTIw.svg" type="image/x-icon" />
+    <link rel="shortcut icon" href="/area/assets/Logo-CmIEqTIw.svg" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,12 +13,12 @@
     />
     <title>Document</title>
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-    <link rel="stylesheet" crossorigin href="/area/assets/index-DCm8x2nR.css">
+    <link rel="stylesheet" crossorigin href="/area/assets/index-B_quLB7G.css">
   </head>
   <body class="relative mx-auto max-w-300">
     <!-- fixed navbar -->
     <nav
-      class="fixed inset-x-0 z-10 mx-auto flex w-screen max-w-300 items-center justify-between rounded-b-[20px] bg-white px-5 pt-5 pb-2 shadow-sm md:rounded-none lg:pb-0 lg:shadow-none"
+      class="absolute inset-x-0 z-20 mx-auto flex w-screen max-w-300 items-center justify-between rounded-b-[20px] bg-white px-5 pt-5 pb-2 shadow-sm md:rounded-none lg:pb-0 lg:shadow-none"
     >
       <!-- main logo -->
       <a href="#" class="hover:cursor-pointer">
@@ -130,9 +130,21 @@
     </nav>
 
     <!-- main section -->
-    <main class="lg:pt-8">
+    <main class="relative lg:pt-8">
       <!-- px-4 and h-90.5 are really doing some magic here -->
       <!-- hero -->
+      <div
+        class="smth0:h-145 absolute inset-x-0 top-140 left-[50%] z-9 h-125 w-[80%] translate-[-50%] rounded-4xl bg-black p-4 md:top-180 lg:top-220 lg:h-125 xl:top-160 xl:h-140"
+      >
+        <picture>
+          <source media="(min-width: 768px)" srcset="/area/assets/tablet-BHDJHHLP.png" />
+          <img
+            class="h-full w-full rounded-t-4xl object-cover"
+            src="/area/assets/phone-kQimAuFo.png"
+            alt="landing-img-phone"
+          />
+        </picture>
+      </div>
       <section
         class="flex flex-col gap-30 px-4 pt-30 md:gap-35 lg:gap-60 lg:px-10"
       >
@@ -142,19 +154,12 @@
           Browse everything.
         </h1>
         <!-- gotta use the picture element for different screensizes -->
-        <div class="bg-green-medium relative h-90.5 rounded-4xl">
-          <picture class="">
-            <source media="(min-width: 768px)" srcset="/area/assets/Ipad-SZ74l7EN.png" />
-            <img
-              class="absolute inset-x-0 bottom-0 mx-auto lg:w-225"
-              src="/area/assets/iPhone-BFqku_MH.png"
-              alt="landing-img-phone"
-            />
-          </picture>
-        </div>
+        <div class="bg-green-medium relative h-90.5 w-full rounded-4xl"></div>
       </section>
       <!-- trust banners -->
-      <section class="flex flex-col gap-7.5 px-4 py-12.5 md:px-10">
+      <section
+        class="relative z-11 flex flex-col gap-7.5 bg-white px-4 py-12.5 md:px-10"
+      >
         <div
           class="font-dm-san text-para text-grey-dark leading-[140%] tracking-[-0.5%]"
         >
@@ -350,7 +355,7 @@
       <!-- specifications -->
       <section
         id="specifications"
-        class="flex flex-col items-center gap-2 pb-30 md:px-10"
+        class="flex flex-col items-center gap-2 px-4 pb-30 md:px-10"
       >
         <div
           class="border-t-grey-medium flex flex-col items-center gap-8 border-t px-4 py-20 text-center md:max-w-140"
@@ -377,212 +382,214 @@
             Discover More
           </button>
         </div>
-        <div class="flex w-full rounded-2xl p-0.5">
-          <div
-            class="border-grey-light flex min-w-0 flex-1 flex-col rounded-2xl border shadow-sm md:shadow-xl"
-          >
-            <h3
-              class="font-dm-san border-b-grey-medium min-w-0 flex-1 gap-4 overflow-clip border-b px-7.5 py-10 text-center text-xl leading-[120%] font-medium tracking-[-8%] text-nowrap"
-            >
-              Area
-            </h3>
+        <div class="w-full overflow-x-auto">
+          <div class="flex min-w-138 rounded-2xl p-0.5">
             <div
-              class="border-b-grey-light flex min-w-0 flex-1 gap-2 overflow-clip border-b px-5 py-8 text-nowrap"
+              class="border-grey-light flex min-w-0 flex-1 flex-col rounded-2xl border shadow-sm md:shadow-xl"
             >
-              <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='11'%20height='8'%20viewBox='0%200%2011%208'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M10.2083%200.8225L3.20833%207.8225L0%204.61417L0.8225%203.79167L3.20833%206.17167L9.38583%200L10.2083%200.8225Z'%20fill='%23485C11'/%3e%3c/svg%3e" alt="yes" />
-              <p
-                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+              <h3
+                class="font-dm-san border-b-grey-medium min-w-0 flex-1 gap-4 overflow-clip border-b px-7.5 py-10 text-center text-xl leading-[120%] font-medium tracking-[-8%] text-nowrap"
               >
-                Ultra-fast browsing
-              </p>
+                Area
+              </h3>
+              <div
+                class="border-b-grey-light flex min-w-0 flex-1 gap-2 overflow-clip border-b px-5 py-8 text-nowrap"
+              >
+                <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='11'%20height='8'%20viewBox='0%200%2011%208'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M10.2083%200.8225L3.20833%207.8225L0%204.61417L0.8225%203.79167L3.20833%206.17167L9.38583%200L10.2083%200.8225Z'%20fill='%23485C11'/%3e%3c/svg%3e" alt="yes" />
+                <p
+                  class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+                >
+                  Ultra-fast browsing
+                </p>
+              </div>
+              <div
+                class="border-b-grey-light flex flex-1 gap-2 overflow-clip border-b px-5 py-8 text-nowrap"
+              >
+                <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='11'%20height='8'%20viewBox='0%200%2011%208'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M10.2083%200.8225L3.20833%207.8225L0%204.61417L0.8225%203.79167L3.20833%206.17167L9.38583%200L10.2083%200.8225Z'%20fill='%23485C11'/%3e%3c/svg%3e" alt="yes" />
+                <p
+                  class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+                >
+                  Advanced AI insights
+                </p>
+              </div>
+              <div
+                class="border-b-grey-light flex flex-1 gap-2 overflow-clip border-b px-5 py-8 text-nowrap"
+              >
+                <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='11'%20height='8'%20viewBox='0%200%2011%208'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M10.2083%200.8225L3.20833%207.8225L0%204.61417L0.8225%203.79167L3.20833%206.17167L9.38583%200L10.2083%200.8225Z'%20fill='%23485C11'/%3e%3c/svg%3e" alt="yes" />
+                <p
+                  class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+                >
+                  Seamless integration
+                </p>
+              </div>
+              <div
+                class="border-b-grey-light flex flex-1 gap-2 overflow-clip border-b px-5 py-8 text-nowrap"
+              >
+                <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='11'%20height='8'%20viewBox='0%200%2011%208'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M10.2083%200.8225L3.20833%207.8225L0%204.61417L0.8225%203.79167L3.20833%206.17167L9.38583%200L10.2083%200.8225Z'%20fill='%23485C11'/%3e%3c/svg%3e" alt="yes" />
+                <p
+                  class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+                >
+                  Advanced AI insights
+                </p>
+              </div>
+              <div
+                class="border-b-grey-light flex flex-1 gap-2 overflow-clip border-b px-5 py-8 text-nowrap"
+              >
+                <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='11'%20height='8'%20viewBox='0%200%2011%208'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M10.2083%200.8225L3.20833%207.8225L0%204.61417L0.8225%203.79167L3.20833%206.17167L9.38583%200L10.2083%200.8225Z'%20fill='%23485C11'/%3e%3c/svg%3e" alt="yes" />
+                <p
+                  class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+                >
+                  Ultra-fast browsing
+                </p>
+              </div>
+              <div
+                class="border-b-grey-light flex flex-1 gap-2 overflow-clip px-5 py-8 text-nowrap"
+              >
+                <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='11'%20height='8'%20viewBox='0%200%2011%208'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M10.2083%200.8225L3.20833%207.8225L0%204.61417L0.8225%203.79167L3.20833%206.17167L9.38583%200L10.2083%200.8225Z'%20fill='%23485C11'/%3e%3c/svg%3e" alt="yes" />
+                <p
+                  class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+                >
+                  Full UTF-8 support
+                </p>
+              </div>
             </div>
             <div
-              class="border-b-grey-light flex flex-1 gap-2 overflow-clip border-b px-5 py-8 text-nowrap"
+              class="flex min-w-0 flex-1 flex-col rounded-2xl border-y border-y-transparent"
             >
-              <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='11'%20height='8'%20viewBox='0%200%2011%208'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M10.2083%200.8225L3.20833%207.8225L0%204.61417L0.8225%203.79167L3.20833%206.17167L9.38583%200L10.2083%200.8225Z'%20fill='%23485C11'/%3e%3c/svg%3e" alt="yes" />
-              <p
-                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+              <h3
+                class="font-dm-san border-b-grey-medium text-grey-dark min-w-0 flex-1 gap-4 overflow-clip border-b px-7.5 py-10 text-center text-xl leading-[120%] font-medium tracking-[-8%] text-nowrap"
               >
-                Advanced AI insights
-              </p>
+                WebSurge
+              </h3>
+              <div
+                class="border-r-grey-light border-b-grey-light flex min-w-0 flex-1 gap-2 overflow-clip border-r border-b px-5 py-8 text-nowrap"
+              >
+                <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='11'%20height='8'%20viewBox='0%200%2011%208'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M10.2083%200.8225L3.20833%207.8225L0%204.61417L0.8225%203.79167L3.20833%206.17167L9.38583%200L10.2083%200.8225Z'%20fill='%236F6F6F'/%3e%3c/svg%3e" alt="yes" />
+                <p
+                  class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+                >
+                  Fast browsing
+                </p>
+              </div>
+              <div
+                class="border-r-grey-light border-b-grey-light flex flex-1 gap-2 overflow-clip border-r border-b px-5 py-8 text-nowrap"
+              >
+                <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='11'%20height='8'%20viewBox='0%200%2011%208'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M10.2083%200.8225L3.20833%207.8225L0%204.61417L0.8225%203.79167L3.20833%206.17167L9.38583%200L10.2083%200.8225Z'%20fill='%236F6F6F'/%3e%3c/svg%3e" alt="yes" />
+                <p
+                  class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+                >
+                  Basic AI recommendations
+                </p>
+              </div>
+              <div
+                class="border-r-grey-light border-b-grey-light flex flex-1 gap-2 overflow-clip border-r border-b px-5 py-8 text-nowrap"
+              >
+                <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='11'%20height='8'%20viewBox='0%200%2011%208'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M10.2083%200.8225L3.20833%207.8225L0%204.61417L0.8225%203.79167L3.20833%206.17167L9.38583%200L10.2083%200.8225Z'%20fill='%236F6F6F'/%3e%3c/svg%3e" alt="yes" />
+                <p
+                  class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+                >
+                  Restricts customization
+                </p>
+              </div>
+              <div
+                class="border-r-grey-light border-b-grey-light flex flex-1 gap-2 overflow-clip border-r border-b px-5 py-8 text-nowrap"
+              >
+                <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='9'%20height='9'%20viewBox='0%200%209%209'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M4.935%204.08333L8.16667%207.315V8.16667H7.315L4.08333%204.935L0.851667%208.16667H0V7.315L3.23167%204.08333L0%200.851667V0H0.851667L4.08333%203.23167L7.315%200H8.16667V0.851667L4.935%204.08333Z'%20fill='%236F6F6F'/%3e%3c/svg%3e" alt="yes" />
+                <p
+                  class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+                >
+                  Basic AI insights
+                </p>
+              </div>
+              <div
+                class="border-r-grey-light border-b-grey-light flex flex-1 gap-2 overflow-clip border-r border-b px-5 py-8 text-nowrap"
+              >
+                <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='11'%20height='8'%20viewBox='0%200%2011%208'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M10.2083%200.8225L3.20833%207.8225L0%204.61417L0.8225%203.79167L3.20833%206.17167L9.38583%200L10.2083%200.8225Z'%20fill='%236F6F6F'/%3e%3c/svg%3e" alt="yes" />
+                <p
+                  class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+                >
+                  Fast browsing
+                </p>
+              </div>
+              <div
+                class="border-r-grey-light border-b-grey-light flex flex-1 gap-2 overflow-clip border-r border-b px-5 py-8 text-nowrap"
+              >
+                <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='9'%20height='9'%20viewBox='0%200%209%209'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M4.935%204.08333L8.16667%207.315V8.16667H7.315L4.08333%204.935L0.851667%208.16667H0V7.315L3.23167%204.08333L0%200.851667V0H0.851667L4.08333%203.23167L7.315%200H8.16667V0.851667L4.935%204.08333Z'%20fill='%236F6F6F'/%3e%3c/svg%3e" alt="yes" />
+                <p
+                  class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+                >
+                  Potential display errors
+                </p>
+              </div>
             </div>
             <div
-              class="border-b-grey-light flex flex-1 gap-2 overflow-clip border-b px-5 py-8 text-nowrap"
+              class="flex min-w-0 flex-1 flex-col rounded-2xl border-y border-y-transparent"
             >
-              <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='11'%20height='8'%20viewBox='0%200%2011%208'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M10.2083%200.8225L3.20833%207.8225L0%204.61417L0.8225%203.79167L3.20833%206.17167L9.38583%200L10.2083%200.8225Z'%20fill='%23485C11'/%3e%3c/svg%3e" alt="yes" />
-              <p
-                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+              <h3
+                class="font-dm-san border-b-grey-medium text-grey-dark min-w-0 flex-1 gap-4 overflow-clip border-b px-7.5 py-10 text-center text-xl leading-[120%] font-medium tracking-[-8%] text-nowrap"
               >
-                Seamless integration
-              </p>
-            </div>
-            <div
-              class="border-b-grey-light flex flex-1 gap-2 overflow-clip border-b px-5 py-8 text-nowrap"
-            >
-              <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='11'%20height='8'%20viewBox='0%200%2011%208'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M10.2083%200.8225L3.20833%207.8225L0%204.61417L0.8225%203.79167L3.20833%206.17167L9.38583%200L10.2083%200.8225Z'%20fill='%23485C11'/%3e%3c/svg%3e" alt="yes" />
-              <p
-                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+                HyperView
+              </h3>
+              <div
+                class="border-b-grey-light flex min-w-0 flex-1 gap-2 overflow-clip border-b px-5 py-8 text-nowrap"
               >
-                Advanced AI insights
-              </p>
-            </div>
-            <div
-              class="border-b-grey-light flex flex-1 gap-2 overflow-clip border-b px-5 py-8 text-nowrap"
-            >
-              <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='11'%20height='8'%20viewBox='0%200%2011%208'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M10.2083%200.8225L3.20833%207.8225L0%204.61417L0.8225%203.79167L3.20833%206.17167L9.38583%200L10.2083%200.8225Z'%20fill='%23485C11'/%3e%3c/svg%3e" alt="yes" />
-              <p
-                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+                <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='9'%20height='9'%20viewBox='0%200%209%209'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M4.935%204.08333L8.16667%207.315V8.16667H7.315L4.08333%204.935L0.851667%208.16667H0V7.315L3.23167%204.08333L0%200.851667V0H0.851667L4.08333%203.23167L7.315%200H8.16667V0.851667L4.935%204.08333Z'%20fill='%236F6F6F'/%3e%3c/svg%3e" alt="yes" />
+                <p
+                  class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+                >
+                  Moderate speeds
+                </p>
+              </div>
+              <div
+                class="border-b-grey-light flex flex-1 gap-2 overflow-clip border-b px-5 py-8 text-nowrap"
               >
-                Ultra-fast browsing
-              </p>
-            </div>
-            <div
-              class="border-b-grey-light flex flex-1 gap-2 overflow-clip px-5 py-8 text-nowrap"
-            >
-              <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='11'%20height='8'%20viewBox='0%200%2011%208'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M10.2083%200.8225L3.20833%207.8225L0%204.61417L0.8225%203.79167L3.20833%206.17167L9.38583%200L10.2083%200.8225Z'%20fill='%23485C11'/%3e%3c/svg%3e" alt="yes" />
-              <p
-                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+                <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='9'%20height='9'%20viewBox='0%200%209%209'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M4.935%204.08333L8.16667%207.315V8.16667H7.315L4.08333%204.935L0.851667%208.16667H0V7.315L3.23167%204.08333L0%200.851667V0H0.851667L4.08333%203.23167L7.315%200H8.16667V0.851667L4.935%204.08333Z'%20fill='%236F6F6F'/%3e%3c/svg%3e" alt="yes" />
+                <p
+                  class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+                >
+                  No AI assistance
+                </p>
+              </div>
+              <div
+                class="border-b-grey-light flex flex-1 gap-2 overflow-clip border-b px-5 py-8 text-nowrap"
               >
-                Full UTF-8 support
-              </p>
-            </div>
-          </div>
-          <div
-            class="flex min-w-0 flex-1 flex-col rounded-2xl border-y border-y-transparent"
-          >
-            <h3
-              class="font-dm-san border-b-grey-medium text-grey-dark min-w-0 flex-1 gap-4 overflow-clip border-b px-7.5 py-10 text-center text-xl leading-[120%] font-medium tracking-[-8%] text-nowrap"
-            >
-              WebSurge
-            </h3>
-            <div
-              class="border-r-grey-light border-b-grey-light flex min-w-0 flex-1 gap-2 overflow-clip border-r border-b px-5 py-8 text-nowrap"
-            >
-              <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='11'%20height='8'%20viewBox='0%200%2011%208'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M10.2083%200.8225L3.20833%207.8225L0%204.61417L0.8225%203.79167L3.20833%206.17167L9.38583%200L10.2083%200.8225Z'%20fill='%236F6F6F'/%3e%3c/svg%3e" alt="yes" />
-              <p
-                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+                <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='9'%20height='9'%20viewBox='0%200%209%209'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M4.935%204.08333L8.16667%207.315V8.16667H7.315L4.08333%204.935L0.851667%208.16667H0V7.315L3.23167%204.08333L0%200.851667V0H0.851667L4.08333%203.23167L7.315%200H8.16667V0.851667L4.935%204.08333Z'%20fill='%236F6F6F'/%3e%3c/svg%3e" alt="yes" />
+                <p
+                  class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+                >
+                  Steep learning curve
+                </p>
+              </div>
+              <div
+                class="border-b-grey-light flex flex-1 gap-2 overflow-clip border-b px-5 py-8 text-nowrap"
               >
-                Fast browsing
-              </p>
-            </div>
-            <div
-              class="border-r-grey-light border-b-grey-light flex flex-1 gap-2 overflow-clip border-r border-b px-5 py-8 text-nowrap"
-            >
-              <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='11'%20height='8'%20viewBox='0%200%2011%208'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M10.2083%200.8225L3.20833%207.8225L0%204.61417L0.8225%203.79167L3.20833%206.17167L9.38583%200L10.2083%200.8225Z'%20fill='%236F6F6F'/%3e%3c/svg%3e" alt="yes" />
-              <p
-                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+                <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='9'%20height='9'%20viewBox='0%200%209%209'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M4.935%204.08333L8.16667%207.315V8.16667H7.315L4.08333%204.935L0.851667%208.16667H0V7.315L3.23167%204.08333L0%200.851667V0H0.851667L4.08333%203.23167L7.315%200H8.16667V0.851667L4.935%204.08333Z'%20fill='%236F6F6F'/%3e%3c/svg%3e" alt="yes" />
+                <p
+                  class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+                >
+                  No AI assistance
+                </p>
+              </div>
+              <div
+                class="border-b-grey-light flex flex-1 gap-2 overflow-clip border-b px-5 py-8 text-nowrap"
               >
-                Basic AI recommendations
-              </p>
-            </div>
-            <div
-              class="border-r-grey-light border-b-grey-light flex flex-1 gap-2 overflow-clip border-r border-b px-5 py-8 text-nowrap"
-            >
-              <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='11'%20height='8'%20viewBox='0%200%2011%208'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M10.2083%200.8225L3.20833%207.8225L0%204.61417L0.8225%203.79167L3.20833%206.17167L9.38583%200L10.2083%200.8225Z'%20fill='%236F6F6F'/%3e%3c/svg%3e" alt="yes" />
-              <p
-                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+                <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='9'%20height='9'%20viewBox='0%200%209%209'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M4.935%204.08333L8.16667%207.315V8.16667H7.315L4.08333%204.935L0.851667%208.16667H0V7.315L3.23167%204.08333L0%200.851667V0H0.851667L4.08333%203.23167L7.315%200H8.16667V0.851667L4.935%204.08333Z'%20fill='%236F6F6F'/%3e%3c/svg%3e" alt="yes" />
+                <p
+                  class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+                >
+                  Moderate speeds
+                </p>
+              </div>
+              <div
+                class="border-b-grey-light flex flex-1 gap-2 overflow-clip border-b px-5 py-8 text-nowrap"
               >
-                Restricts customization
-              </p>
-            </div>
-            <div
-              class="border-r-grey-light border-b-grey-light flex flex-1 gap-2 overflow-clip border-r border-b px-5 py-8 text-nowrap"
-            >
-              <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='9'%20height='9'%20viewBox='0%200%209%209'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M4.935%204.08333L8.16667%207.315V8.16667H7.315L4.08333%204.935L0.851667%208.16667H0V7.315L3.23167%204.08333L0%200.851667V0H0.851667L4.08333%203.23167L7.315%200H8.16667V0.851667L4.935%204.08333Z'%20fill='%236F6F6F'/%3e%3c/svg%3e" alt="yes" />
-              <p
-                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
-              >
-                Basic AI insights
-              </p>
-            </div>
-            <div
-              class="border-r-grey-light border-b-grey-light flex flex-1 gap-2 overflow-clip border-r border-b px-5 py-8 text-nowrap"
-            >
-              <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='11'%20height='8'%20viewBox='0%200%2011%208'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M10.2083%200.8225L3.20833%207.8225L0%204.61417L0.8225%203.79167L3.20833%206.17167L9.38583%200L10.2083%200.8225Z'%20fill='%236F6F6F'/%3e%3c/svg%3e" alt="yes" />
-              <p
-                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
-              >
-                Fast browsing
-              </p>
-            </div>
-            <div
-              class="border-r-grey-light border-b-grey-light flex flex-1 gap-2 overflow-clip border-r border-b px-5 py-8 text-nowrap"
-            >
-              <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='9'%20height='9'%20viewBox='0%200%209%209'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M4.935%204.08333L8.16667%207.315V8.16667H7.315L4.08333%204.935L0.851667%208.16667H0V7.315L3.23167%204.08333L0%200.851667V0H0.851667L4.08333%203.23167L7.315%200H8.16667V0.851667L4.935%204.08333Z'%20fill='%236F6F6F'/%3e%3c/svg%3e" alt="yes" />
-              <p
-                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
-              >
-                Potential display errors
-              </p>
-            </div>
-          </div>
-          <div
-            class="flex min-w-0 flex-1 flex-col rounded-2xl border-y border-y-transparent"
-          >
-            <h3
-              class="font-dm-san border-b-grey-medium text-grey-dark min-w-0 flex-1 gap-4 overflow-clip border-b px-7.5 py-10 text-center text-xl leading-[120%] font-medium tracking-[-8%] text-nowrap"
-            >
-              HyperView
-            </h3>
-            <div
-              class="border-b-grey-light flex min-w-0 flex-1 gap-2 overflow-clip border-b px-5 py-8 text-nowrap"
-            >
-              <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='9'%20height='9'%20viewBox='0%200%209%209'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M4.935%204.08333L8.16667%207.315V8.16667H7.315L4.08333%204.935L0.851667%208.16667H0V7.315L3.23167%204.08333L0%200.851667V0H0.851667L4.08333%203.23167L7.315%200H8.16667V0.851667L4.935%204.08333Z'%20fill='%236F6F6F'/%3e%3c/svg%3e" alt="yes" />
-              <p
-                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
-              >
-                Moderate speeds
-              </p>
-            </div>
-            <div
-              class="border-b-grey-light flex flex-1 gap-2 overflow-clip border-b px-5 py-8 text-nowrap"
-            >
-              <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='9'%20height='9'%20viewBox='0%200%209%209'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M4.935%204.08333L8.16667%207.315V8.16667H7.315L4.08333%204.935L0.851667%208.16667H0V7.315L3.23167%204.08333L0%200.851667V0H0.851667L4.08333%203.23167L7.315%200H8.16667V0.851667L4.935%204.08333Z'%20fill='%236F6F6F'/%3e%3c/svg%3e" alt="yes" />
-              <p
-                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
-              >
-                No AI assistance
-              </p>
-            </div>
-            <div
-              class="border-b-grey-light flex flex-1 gap-2 overflow-clip border-b px-5 py-8 text-nowrap"
-            >
-              <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='9'%20height='9'%20viewBox='0%200%209%209'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M4.935%204.08333L8.16667%207.315V8.16667H7.315L4.08333%204.935L0.851667%208.16667H0V7.315L3.23167%204.08333L0%200.851667V0H0.851667L4.08333%203.23167L7.315%200H8.16667V0.851667L4.935%204.08333Z'%20fill='%236F6F6F'/%3e%3c/svg%3e" alt="yes" />
-              <p
-                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
-              >
-                Steep learning curve
-              </p>
-            </div>
-            <div
-              class="border-b-grey-light flex flex-1 gap-2 overflow-clip border-b px-5 py-8 text-nowrap"
-            >
-              <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='9'%20height='9'%20viewBox='0%200%209%209'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M4.935%204.08333L8.16667%207.315V8.16667H7.315L4.08333%204.935L0.851667%208.16667H0V7.315L3.23167%204.08333L0%200.851667V0H0.851667L4.08333%203.23167L7.315%200H8.16667V0.851667L4.935%204.08333Z'%20fill='%236F6F6F'/%3e%3c/svg%3e" alt="yes" />
-              <p
-                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
-              >
-                No AI assistance
-              </p>
-            </div>
-            <div
-              class="border-b-grey-light flex flex-1 gap-2 overflow-clip border-b px-5 py-8 text-nowrap"
-            >
-              <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='9'%20height='9'%20viewBox='0%200%209%209'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M4.935%204.08333L8.16667%207.315V8.16667H7.315L4.08333%204.935L0.851667%208.16667H0V7.315L3.23167%204.08333L0%200.851667V0H0.851667L4.08333%203.23167L7.315%200H8.16667V0.851667L4.935%204.08333Z'%20fill='%236F6F6F'/%3e%3c/svg%3e" alt="yes" />
-              <p
-                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
-              >
-                Moderate speeds
-              </p>
-            </div>
-            <div
-              class="border-b-grey-light flex flex-1 gap-2 overflow-clip border-b px-5 py-8 text-nowrap"
-            >
-              <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='9'%20height='9'%20viewBox='0%200%209%209'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M4.935%204.08333L8.16667%207.315V8.16667H7.315L4.08333%204.935L0.851667%208.16667H0V7.315L3.23167%204.08333L0%200.851667V0H0.851667L4.08333%203.23167L7.315%200H8.16667V0.851667L4.935%204.08333Z'%20fill='%236F6F6F'/%3e%3c/svg%3e" alt="yes" />
-              <p
-                class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
-              >
-                Partial UTF-8 support
-              </p>
+                <img class="w-2.5" src="data:image/svg+xml,%3csvg%20width='9'%20height='9'%20viewBox='0%200%209%209'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M4.935%204.08333L8.16667%207.315V8.16667H7.315L4.08333%204.935L0.851667%208.16667H0V7.315L3.23167%204.08333L0%200.851667V0H0.851667L4.08333%203.23167L7.315%200H8.16667V0.851667L4.935%204.08333Z'%20fill='%236F6F6F'/%3e%3c/svg%3e" alt="yes" />
+                <p
+                  class="text-xxs min-w-0 font-mono leading-[140%] tracking-[-1%] lg:text-xs"
+                >
+                  Partial UTF-8 support
+                </p>
+              </div>
             </div>
           </div>
         </div>
