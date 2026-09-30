@@ -130,9 +130,21 @@
     </nav>
 
     <!-- main section -->
-    <main class="lg:pt-8">
+    <main class="relative lg:pt-8">
       <!-- px-4 and h-90.5 are really doing some magic here -->
       <!-- hero -->
+      <div
+        class="smth0:h-145 absolute inset-x-0 top-140 left-[50%] z-9 h-125 w-[80%] translate-[-50%] rounded-4xl bg-black p-4 md:top-180 lg:top-220 lg:h-125 xl:top-160 xl:h-140"
+      >
+        <picture>
+          <source media="(min-width: 768px)" srcset="./media/tablet.png" />
+          <img
+            class="h-full w-full rounded-t-4xl object-cover"
+            src="./media/phone.png"
+            alt="landing-img-phone"
+          />
+        </picture>
+      </div>
       <section
         class="flex flex-col gap-30 px-4 pt-30 md:gap-35 lg:gap-60 lg:px-10"
       >
@@ -142,19 +154,12 @@
           Browse everything.
         </h1>
         <!-- gotta use the picture element for different screensizes -->
-        <div class="bg-green-medium relative h-90.5 rounded-4xl">
-          <picture class="">
-            <source media="(min-width: 768px)" srcset="./media/Ipad.png" />
-            <img
-              class="absolute inset-x-0 bottom-0 mx-auto lg:w-225"
-              src="./media/iPhone.png"
-              alt="landing-img-phone"
-            />
-          </picture>
-        </div>
+        <div class="bg-green-medium relative h-90.5 w-full rounded-4xl"></div>
       </section>
       <!-- trust banners -->
-      <section class="flex flex-col gap-7.5 px-4 py-12.5 md:px-10">
+      <section
+        class="relative z-11 flex flex-col gap-7.5 bg-white px-4 py-12.5 md:px-10"
+      >
         <div
           class="font-dm-san text-para text-grey-dark leading-[140%] tracking-[-0.5%]"
         >
