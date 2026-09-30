@@ -22,6 +22,9 @@
   --text-label: 0.75rem; /* 12px */
 
   --text-xxs: 0.65rem; /*approx 10.5px*/
+
+  --breakpoint-smth0: 441px;
+  --breakpoint-myxl: 1168px;
 }
 /* 
 * {
